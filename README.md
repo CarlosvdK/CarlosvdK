@@ -83,6 +83,18 @@ Here are some things I've been working on:
 ---
 
 <div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CarlosvdK/CarlosvdK/output/snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/CarlosvdK/CarlosvdK/output/snake.svg" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/CarlosvdK/CarlosvdK/output/snake.svg" />
+</picture>
+
+</div>
+
+---
+
+<div align="center">
   <i>I like projects where business context meets real building—data in, product out.</i>
 </div>
 

@@ -6,32 +6,32 @@
 
 ---
 
-## Hey there, I'm Carlos 👋
+## Hey there, I'm Carlos <img src="assets/icons/wave.svg" width="22" height="22" />
 
 **Business Analytics MSc @ Esade · Data & Strategy · Builder**
 
 IN A GALAXY NOT SO FAR AWAY…
 A business-trained builder is finishing an MSc in Business Analytics at ESADE...
-With 2 years in market analysis and marketing at SoftwareOne and TTNL, I’m learning how to build SaaS products that are genuinely useful—focused on solutions, not just software (and whatever else I find fun to explore).
+With 2 years in market analysis and marketing at SoftwareOne and TTNL, I'm learning how to build SaaS products that are genuinely useful—focused on solutions, not just software (and whatever else I find fun to explore).
 
-📍 Barcelona · 🌍 Lived in South Africa, The Netherlands, Spain
-💬 English · Dutch · Afrikaans
+<img src="assets/icons/pin.svg" width="18" height="18" /> Barcelona · <img src="assets/icons/globe.svg" width="18" height="18" /> Lived in South Africa, The Netherlands, Spain
+<img src="assets/icons/speech.svg" width="18" height="18" /> English · Dutch · Afrikaans
 
 ---
 
-## 🛠️ What I Build
+## <img src="assets/icons/tools.svg" width="22" height="22" /> What I Build
 
-*I like turning insights into tools you can actually use.*
+*I like turning messy problems into tools you can actually use. Here's what I'm building:*
 
 <p align="center">
-  <img src="assets/astronaut-lowg.svg" width="600" alt="astronaut running in low gravity" />
+  <img src="assets/astronaut-jetpack.svg" width="600" alt="astronaut collecting tools and building a jetpack" />
 </p>
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🧠 [Notiq](https://github.com/CarlosvdK/Notiq)
+### <img src="assets/icons/brain.svg" width="20" height="20" /> [Notiq](https://github.com/CarlosvdK/Notiq)
 AI-powered note-taking app that turns messy thoughts into clear, searchable notes.
 
 [`View Repo →`](https://github.com/CarlosvdK/Notiq)
@@ -39,7 +39,7 @@ AI-powered note-taking app that turns messy thoughts into clear, searchable note
 </td>
 <td width="50%" valign="top">
 
-### 📰 [N26](https://github.com/CarlosvdK/N26-)
+### <img src="assets/icons/news.svg" width="20" height="20" /> [N26](https://github.com/CarlosvdK/N26-)
 A digestible news feed built to make staying informed fast and simple.
 
 [`View Repo →`](https://github.com/CarlosvdK/N26-)
@@ -49,7 +49,7 @@ A digestible news feed built to make staying informed fast and simple.
 <tr>
 <td width="50%" valign="top">
 
-### 🧑‍💻 [FaceID Attendance](https://github.com/CarlosvdK/Face-Attendance_assignment)
+### <img src="assets/icons/code.svg" width="20" height="20" /> [FaceID Attendance](https://github.com/CarlosvdK/Face-Attendance_assignment)
 Face recognition attendance system for quick, automated check-ins.
 
 [`View Repo →`](https://github.com/CarlosvdK/Face-Attendance_assignment)
@@ -57,7 +57,7 @@ Face recognition attendance system for quick, automated check-ins.
 </td>
 <td width="50%" valign="top">
 
-### ⚡ n8n Automation
+### <img src="assets/icons/bolt.svg" width="20" height="20" /> n8n Automation
 Workflow automations (ingest → enrich → notify).
 
 `Coming soon`
@@ -68,7 +68,7 @@ Workflow automations (ingest → enrich → notify).
 
 ---
 
-## 🛠️ Tech Stack
+## <img src="assets/icons/tools.svg" width="22" height="22" /> Tech Stack
 
 **Languages & Analysis**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
@@ -90,18 +90,18 @@ Workflow automations (ingest → enrich → notify).
 
 ---
 
-## 🎯 About Me
+## <img src="assets/icons/target.svg" width="22" height="22" /> About Me
 
-- 🎓 Completing an **MSc in Business Analytics** @ **ESADE Business School**
-- 🌍 Based in **Barcelona** — Dutch/Afrikaans background
-- 🧭 Studied **International Business**, with a strong interest in how products win in new markets
-- 📊 ~2 years in **market analysis & marketing** (SoftwareOne + TTNL), including market-entry work
-- 🤖 Currently exploring **machine learning** + **automation** to build practical **SaaS tools** for companies
-- 🗣️ Languages: **English · Dutch · Afrikaans**
+- <img src="assets/icons/grad.svg" width="18" height="18" /> Completing an **MSc in Business Analytics** @ **ESADE Business School**
+- <img src="assets/icons/globe.svg" width="18" height="18" /> Based in **Barcelona** — Dutch/Afrikaans background
+- <img src="assets/icons/compass.svg" width="18" height="18" /> Studied **International Business**, with a strong interest in how products win in new markets
+- <img src="assets/icons/chart.svg" width="18" height="18" /> ~2 years in **market analysis & marketing** (SoftwareOne + TTNL), including market-entry work
+- <img src="assets/icons/robot.svg" width="18" height="18" /> Currently exploring **machine learning** + **automation** to build practical **SaaS tools** for companies
+- <img src="assets/icons/speak.svg" width="18" height="18" /> Languages: **English · Dutch · Afrikaans**
 
 ---
 
-## 📬 Let's Connect
+## <img src="assets/icons/mail.svg" width="22" height="22" /> Let's Connect
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_USERNAME)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME)

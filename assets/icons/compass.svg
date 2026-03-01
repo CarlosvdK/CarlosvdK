@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <circle cx="10" cy="10" r="7.5" fill="none" stroke="#4a8aff" stroke-width="1.2" opacity="0.6"/>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="0,10,10;15,10,10;-10,10,10;0,10,10" dur="4s" repeatCount="indefinite"/>
+    <polygon points="10,4 8.5,10 10,9 11.5,10" fill="#4a8aff" opacity="0.8"/>
+    <polygon points="10,16 11.5,10 10,11 8.5,10" fill="#4a8aff" opacity="0.35"/>
+  </g>
+  <circle cx="10" cy="10" r="1" fill="#4a8aff" opacity="0.6"/>
+</svg>

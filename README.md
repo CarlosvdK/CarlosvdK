@@ -19,15 +19,52 @@ With 2 years in market analysis and marketing at SoftwareOne and TTNL, I’m lea
 
 ---
 
-## 🔨 What I Build
+## 🛠️ What I Build
 
-Here are some things I've been working on:
+*I like turning insights into tools you can actually use.*
 
-| | |
-|---|---|
-| 🧠 **[Notiq](https://github.com/CarlosvdK/Notiq)**<br>AI-powered note-taking app that turns messy thoughts into clear, searchable notes.<br>🔗 [Repo](https://github.com/CarlosvdK/Notiq) | 📰 **[N26](https://github.com/CarlosvdK/N26-)**<br>A digestible news feed built to make staying informed fast and simple.<br>🔗 [Repo](https://github.com/CarlosvdK/N26-) |
-|---|---|
-| 🧑‍💻 **[FaceID Attendance](https://github.com/CarlosvdK/Face-Attendance_assignment)**<br>Face recognition attendance system for quick, automated check-ins.<br>🔗 [Repo](https://github.com/CarlosvdK/Face-Attendance_assignment) | ✨ **More coming soon**<br>ML + SaaS experiments, small tools, and fun side quests. |
+<p align="center">
+  <img src="assets/astronaut-lowg.svg" width="600" alt="astronaut running in low gravity" />
+</p>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🧠 [Notiq](https://github.com/CarlosvdK/Notiq)
+AI-powered note-taking app that turns messy thoughts into clear, searchable notes.
+
+[`View Repo →`](https://github.com/CarlosvdK/Notiq)
+
+</td>
+<td width="50%" valign="top">
+
+### 📰 [N26](https://github.com/CarlosvdK/N26-)
+A digestible news feed built to make staying informed fast and simple.
+
+[`View Repo →`](https://github.com/CarlosvdK/N26-)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🧑‍💻 [FaceID Attendance](https://github.com/CarlosvdK/Face-Attendance_assignment)
+Face recognition attendance system for quick, automated check-ins.
+
+[`View Repo →`](https://github.com/CarlosvdK/Face-Attendance_assignment)
+
+</td>
+<td width="50%" valign="top">
+
+### ⚡ n8n Automation
+Workflow automations (ingest → enrich → notify).
+
+`Coming soon`
+
+</td>
+</tr>
+</table>
 
 ---
 

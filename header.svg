@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="400" viewBox="0 0 900 400">
   <defs>
-    <!-- Perspective gradient for crawl -->
     <linearGradient id="fadeTop" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#000000" stop-opacity="1"/>
       <stop offset="30%" stop-color="#000000" stop-opacity="0"/>
@@ -9,7 +8,6 @@
       <stop offset="0%" stop-color="#000000" stop-opacity="1"/>
       <stop offset="25%" stop-color="#000000" stop-opacity="0"/>
     </linearGradient>
-    <!-- Glow for text -->
     <filter id="textGlow">
       <feGaussianBlur stdDeviation="3" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -49,7 +47,6 @@
       <circle cx="130" cy="170" r="0.9" fill="white" opacity="0.7"/>
       <circle cx="185" cy="65" r="0.7" fill="white" opacity="0.9"/>
       <circle cx="30" cy="120" r="1.2" fill="white" opacity="0.5"/>
-      <!-- Twinkling stars with animation -->
       <circle cx="15" cy="80" r="1.0" fill="white">
         <animate attributeName="opacity" values="0.9;0.2;0.9" dur="2.3s" repeatCount="indefinite"/>
       </circle>
@@ -63,9 +60,9 @@
         <animate attributeName="opacity" values="0.4;1;0.4" dur="2.8s" repeatCount="indefinite"/>
       </circle>
     </pattern>
-    <!-- Crawl text clip -->
+    <!-- Wider crawl clip -->
     <clipPath id="crawlClip">
-      <rect x="100" y="20" width="700" height="370"/>
+      <rect x="50" y="20" width="800" height="370"/>
     </clipPath>
   </defs>
 
@@ -112,194 +109,260 @@
       dur="4s" repeatCount="indefinite" additive="sum"/>
   </g>
 
-  <!-- ═══════════════════════════════ -->
-  <!--     SHIP 1 — X-Wing style      -->
-  <!--   Flies left→right, FAST       -->
-  <!-- ═══════════════════════════════ -->
+  <!-- ═══════════════════════════════════════ -->
+  <!--  SHIP 1 — Z-95 Headhunter / X-Wing    -->
+  <!--  Long nose, swept X-wings, maroon      -->
+  <!--  stripes, top engines, wingtip cannons -->
+  <!--  Flies left→right, FAST                -->
+  <!-- ═══════════════════════════════════════ -->
   <g id="ship1">
     <animateTransform attributeName="transform" type="translate"
-      values="-120,80; 1020,80"
+      values="-140,75; 1040,75"
       dur="5s" begin="0s" repeatCount="indefinite" calcMode="linear"/>
 
-    <!-- Long speed streaks behind ship -->
-    <line x1="-20" y1="0" x2="-90" y2="0" stroke="#ff6600" stroke-width="1.5" opacity="0.5" filter="url(#speedBlur)"/>
-    <line x1="-15" y1="-5" x2="-70" y2="-5" stroke="#ff8800" stroke-width="1" opacity="0.35"/>
-    <line x1="-15" y1="5" x2="-70" y2="5" stroke="#ff8800" stroke-width="1" opacity="0.35"/>
-    <line x1="-12" y1="-18" x2="-55" y2="-18" stroke="#ff6600" stroke-width="1" opacity="0.4"/>
-    <line x1="-12" y1="18" x2="-55" y2="18" stroke="#ff6600" stroke-width="1" opacity="0.4"/>
+    <!-- Speed streaks -->
+    <line x1="-30" y1="0" x2="-110" y2="0" stroke="#ff6600" stroke-width="1.8" opacity="0.5" filter="url(#speedBlur)"/>
+    <line x1="-22" y1="-8" x2="-80" y2="-8" stroke="#ff8800" stroke-width="1" opacity="0.35"/>
+    <line x1="-22" y1="8" x2="-80" y2="8" stroke="#ff8800" stroke-width="1" opacity="0.35"/>
+    <line x1="-18" y1="-22" x2="-65" y2="-22" stroke="#ff6600" stroke-width="1" opacity="0.4"/>
+    <line x1="-18" y1="22" x2="-65" y2="22" stroke="#ff6600" stroke-width="1" opacity="0.4"/>
 
-    <!-- Engine glow trail — big and intense -->
-    <ellipse cx="-18" cy="0" rx="30" ry="5" fill="#ff4400" opacity="0.3" filter="url(#engineGlow)">
-      <animate attributeName="rx" values="30;42;30" dur="0.15s" repeatCount="indefinite"/>
+    <!-- Engine glow trail -->
+    <ellipse cx="-28" cy="0" rx="35" ry="6" fill="#ff4400" opacity="0.3" filter="url(#engineGlow)">
+      <animate attributeName="rx" values="35;48;35" dur="0.15s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0.3;0.55;0.3" dur="0.15s" repeatCount="indefinite"/>
     </ellipse>
-    <ellipse cx="-14" cy="0" rx="18" ry="3" fill="#ffaa00" opacity="0.7" filter="url(#engineGlow)">
-      <animate attributeName="rx" values="18;26;18" dur="0.15s" repeatCount="indefinite"/>
+    <ellipse cx="-22" cy="0" rx="20" ry="3" fill="#ffaa00" opacity="0.7" filter="url(#engineGlow)">
+      <animate attributeName="rx" values="20;30;20" dur="0.15s" repeatCount="indefinite"/>
     </ellipse>
-    <ellipse cx="-10" cy="0" rx="8" ry="2" fill="#ffdd44" opacity="0.9">
+    <ellipse cx="-16" cy="0" rx="8" ry="2" fill="#ffdd44" opacity="0.9">
       <animate attributeName="rx" values="8;12;8" dur="0.15s" repeatCount="indefinite"/>
     </ellipse>
 
-    <!-- Fuselage -->
-    <ellipse cx="0" cy="0" rx="28" ry="7" fill="#c0b898"/>
-    <ellipse cx="8" cy="0" rx="20" ry="5" fill="#d4c9a8"/>
-    <!-- Cockpit -->
-    <ellipse cx="20" cy="-2" rx="8" ry="4" fill="#88aacc" opacity="0.9"/>
-    <ellipse cx="21" cy="-2" rx="5" ry="2.5" fill="#aaccee" opacity="0.7"/>
-    <!-- Wings top -->
-    <polygon points="-5,-6 20,-6 12,-20 -8,-20" fill="#b0a888" stroke="#887860" stroke-width="0.5"/>
-    <!-- Wings bottom -->
-    <polygon points="-5,6 20,6 12,20 -8,20" fill="#b0a888" stroke="#887860" stroke-width="0.5"/>
-    <!-- Engine pods -->
-    <ellipse cx="-6" cy="-18" rx="5" ry="2.5" fill="#888070"/>
-    <ellipse cx="-6" cy="18" rx="5" ry="2.5" fill="#888070"/>
-    <!-- Engine glow pods — brighter -->
-    <circle cx="-11" cy="-18" r="3.5" fill="#ff6600" filter="url(#engineGlow)" opacity="0.9">
-      <animate attributeName="r" values="3.5;5;3.5" dur="0.15s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="-11" cy="18" r="3.5" fill="#ff6600" filter="url(#engineGlow)" opacity="0.9">
-      <animate attributeName="r" values="3.5;5;3.5" dur="0.15s" repeatCount="indefinite"/>
-    </circle>
-    <!-- R2 unit bump -->
-    <circle cx="5" cy="-7" r="3" fill="#ccddee" opacity="0.9"/>
+    <!-- === FUSELAGE — long pointed nose === -->
+    <!-- Main body — long narrow fuselage -->
+    <polygon points="38,0 30,-4 -20,-5 -28,-3 -28,3 -20,5 30,4" fill="#d8d0b8" stroke="#a09880" stroke-width="0.5"/>
+    <!-- Nose cone -->
+    <polygon points="38,0 30,-3 30,3" fill="#c8c0a8"/>
+    <!-- Fuselage top panel line -->
+    <line x1="-20" y1="-4" x2="30" y2="-3" stroke="#b8b098" stroke-width="0.5" opacity="0.7"/>
+    <!-- Maroon racing stripe along fuselage -->
+    <line x1="-18" y1="0" x2="34" y2="0" stroke="#8b2020" stroke-width="2.5" opacity="0.7"/>
+    <!-- Cockpit canopy -->
+    <ellipse cx="18" cy="-3" rx="8" ry="3.5" fill="#6699bb" opacity="0.9" stroke="#88aacc" stroke-width="0.5"/>
+    <ellipse cx="20" cy="-3" rx="5" ry="2" fill="#aaccee" opacity="0.5"/>
 
-    <!-- LASER SHOTS — fast bursts -->
+    <!-- === TOP ENGINES — two big cylinders === -->
+    <!-- Left engine nacelle -->
+    <rect x="-16" y="-12" width="22" height="5" rx="2.5" fill="#c0b8a0" stroke="#a09880" stroke-width="0.5"/>
+    <rect x="-16" y="-12" width="22" height="2" rx="1" fill="#d0c8b0" opacity="0.6"/>
+    <!-- Engine intake ring -->
+    <ellipse cx="-16" cy="-9.5" rx="1.5" ry="2.5" fill="#555" stroke="#777" stroke-width="0.5"/>
+    <!-- Engine exhaust glow -->
+    <circle cx="-18" cy="-9.5" r="3" fill="#ff6600" filter="url(#engineGlow)" opacity="0.9">
+      <animate attributeName="r" values="3;4.5;3" dur="0.12s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Maroon stripe on engine -->
+    <line x1="-14" y1="-9.5" x2="6" y2="-9.5" stroke="#8b2020" stroke-width="1.5" opacity="0.6"/>
+    <!-- Right engine nacelle -->
+    <rect x="-16" y="7" width="22" height="5" rx="2.5" fill="#c0b8a0" stroke="#a09880" stroke-width="0.5"/>
+    <rect x="-16" y="10" width="22" height="2" rx="1" fill="#d0c8b0" opacity="0.6"/>
+    <ellipse cx="-16" cy="9.5" rx="1.5" ry="2.5" fill="#555" stroke="#777" stroke-width="0.5"/>
+    <circle cx="-18" cy="9.5" r="3" fill="#ff6600" filter="url(#engineGlow)" opacity="0.9">
+      <animate attributeName="r" values="3;4.5;3" dur="0.12s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="-14" y1="9.5" x2="6" y2="9.5" stroke="#8b2020" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- === WINGS — swept back X-configuration === -->
+    <!-- Upper-left wing (swept back and up) -->
+    <polygon points="10,-7 -8,-7 -20,-26 2,-26" fill="#d0c8b0" stroke="#a09880" stroke-width="0.5"/>
+    <line x1="-6" y1="-8" x2="-16" y2="-25" stroke="#8b2020" stroke-width="2" opacity="0.6"/>
+    <!-- Wing tip cannon -->
+    <rect x="-24" y="-27.5" width="10" height="3" rx="1.5" fill="#999080" stroke="#777060" stroke-width="0.5"/>
+    <circle cx="-25" cy="-26" r="1.5" fill="#ff4444" opacity="0.6"/>
+
+    <!-- Lower-left wing (swept back and down) -->
+    <polygon points="10,7 -8,7 -20,26 2,26" fill="#d0c8b0" stroke="#a09880" stroke-width="0.5"/>
+    <line x1="-6" y1="8" x2="-16" y2="25" stroke="#8b2020" stroke-width="2" opacity="0.6"/>
+    <!-- Wing tip cannon -->
+    <rect x="-24" y="24.5" width="10" height="3" rx="1.5" fill="#999080" stroke="#777060" stroke-width="0.5"/>
+    <circle cx="-25" cy="26" r="1.5" fill="#ff4444" opacity="0.6"/>
+
+    <!-- Maroon wing-tip accents -->
+    <polygon points="-18,-24 -20,-26 2,-26 0,-24" fill="#8b2020" opacity="0.5"/>
+    <polygon points="-18,24 -20,26 2,26 0,24" fill="#8b2020" opacity="0.5"/>
+
+    <!-- LASER SHOTS from wingtip cannons -->
     <g>
-      <line x1="28" y1="-3" x2="28" y2="-3" stroke="#ff4444" stroke-width="2.5" filter="url(#laserGlow)">
-        <animate attributeName="x2" values="28;200;200" dur="5s" begin="0s" repeatCount="indefinite"/>
-        <animate attributeName="x1" values="28;190;190" dur="5s" begin="0s" repeatCount="indefinite"/>
+      <line x1="-25" y1="-26" x2="-25" y2="-26" stroke="#ff4444" stroke-width="2.5" filter="url(#laserGlow)">
+        <animate attributeName="x2" values="-25;180;180" dur="5s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="x1" values="-25;170;170" dur="5s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="-26;-26;-26" dur="5s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="y1" values="-26;-26;-26" dur="5s" begin="0s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0;0" dur="5s" begin="0s" repeatCount="indefinite"/>
       </line>
-      <line x1="28" y1="3" x2="28" y2="3" stroke="#ff4444" stroke-width="2.5" filter="url(#laserGlow)">
-        <animate attributeName="x2" values="28;200;200" dur="5s" begin="0s" repeatCount="indefinite"/>
-        <animate attributeName="x1" values="28;190;190" dur="5s" begin="0s" repeatCount="indefinite"/>
+      <line x1="-25" y1="26" x2="-25" y2="26" stroke="#ff4444" stroke-width="2.5" filter="url(#laserGlow)">
+        <animate attributeName="x2" values="-25;180;180" dur="5s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="x1" values="-25;170;170" dur="5s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="y2" values="26;26;26" dur="5s" begin="0s" repeatCount="indefinite"/>
+        <animate attributeName="y1" values="26;26;26" dur="5s" begin="0s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0;0;1;1;0;0;0;0;0;0" dur="5s" begin="0s" repeatCount="indefinite"/>
       </line>
     </g>
     <g>
-      <line x1="28" y1="-3" x2="28" y2="-3" stroke="#ff6600" stroke-width="2" filter="url(#laserGlow)">
-        <animate attributeName="x2" values="28;200;200" dur="5s" begin="3s" repeatCount="indefinite"/>
-        <animate attributeName="x1" values="28;190;190" dur="5s" begin="3s" repeatCount="indefinite"/>
+      <line x1="-25" y1="-26" x2="-25" y2="-26" stroke="#ff6600" stroke-width="2" filter="url(#laserGlow)">
+        <animate attributeName="x2" values="-25;180;180" dur="5s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="x1" values="-25;170;170" dur="5s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0;0;1;1;0;0;0;0;0" dur="5s" begin="3s" repeatCount="indefinite"/>
+      </line>
+      <line x1="-25" y1="26" x2="-25" y2="26" stroke="#ff6600" stroke-width="2" filter="url(#laserGlow)">
+        <animate attributeName="x2" values="-25;180;180" dur="5s" begin="3s" repeatCount="indefinite"/>
+        <animate attributeName="x1" values="-25;170;170" dur="5s" begin="3s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0;0;0;1;1;0;0;0;0;0" dur="5s" begin="3s" repeatCount="indefinite"/>
       </line>
     </g>
   </g>
 
-  <!-- ═══════════════════════════════ -->
-  <!--   SHIP 2 — TIE Fighter style   -->
-  <!--   Flies right→left, FAST       -->
-  <!-- ═══════════════════════════════ -->
+  <!-- ═══════════════════════════════════════ -->
+  <!--  SHIP 2 — Z-95 variant (enemy)         -->
+  <!--  Flies right→left, FAST                -->
+  <!-- ═══════════════════════════════════════ -->
   <g id="ship2">
     <animateTransform attributeName="transform" type="translate"
-      values="1020,300; -120,300"
+      values="1040,300; -140,300"
       dur="6s" begin="2s" repeatCount="indefinite" calcMode="linear"/>
 
     <!-- Speed streaks trailing right -->
-    <line x1="20" y1="0" x2="90" y2="0" stroke="#00ccff" stroke-width="1.5" opacity="0.5" filter="url(#speedBlur)"/>
-    <line x1="15" y1="-8" x2="65" y2="-8" stroke="#00aaff" stroke-width="1" opacity="0.3"/>
-    <line x1="15" y1="8" x2="65" y2="8" stroke="#00aaff" stroke-width="1" opacity="0.3"/>
+    <line x1="30" y1="0" x2="110" y2="0" stroke="#00ccff" stroke-width="1.8" opacity="0.5" filter="url(#speedBlur)"/>
+    <line x1="22" y1="-8" x2="80" y2="-8" stroke="#00aaff" stroke-width="1" opacity="0.3"/>
+    <line x1="22" y1="8" x2="80" y2="8" stroke="#00aaff" stroke-width="1" opacity="0.3"/>
+    <line x1="18" y1="-22" x2="65" y2="-22" stroke="#00ccff" stroke-width="1" opacity="0.35"/>
+    <line x1="18" y1="22" x2="65" y2="22" stroke="#00ccff" stroke-width="1" opacity="0.35"/>
 
-    <!-- Engine glow (reversed, trails right) — bigger -->
-    <ellipse cx="16" cy="0" rx="28" ry="5" fill="#0088ff" opacity="0.3" filter="url(#engineGlow)">
-      <animate attributeName="rx" values="28;40;28" dur="0.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="0.2s" repeatCount="indefinite"/>
+    <!-- Engine glow trail (trails right) -->
+    <ellipse cx="28" cy="0" rx="35" ry="6" fill="#0066ff" opacity="0.3" filter="url(#engineGlow)">
+      <animate attributeName="rx" values="35;48;35" dur="0.18s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.55;0.3" dur="0.18s" repeatCount="indefinite"/>
     </ellipse>
-    <ellipse cx="12" cy="0" rx="14" ry="3" fill="#00ccff" opacity="0.6" filter="url(#engineGlow)">
-      <animate attributeName="rx" values="14;22;14" dur="0.2s" repeatCount="indefinite"/>
+    <ellipse cx="22" cy="0" rx="20" ry="3" fill="#00aaff" opacity="0.6" filter="url(#engineGlow)">
+      <animate attributeName="rx" values="20;30;20" dur="0.18s" repeatCount="indefinite"/>
     </ellipse>
-    <!-- Central pod -->
-    <circle cx="0" cy="0" r="12" fill="#2a2a2a" stroke="#444" stroke-width="1"/>
-    <circle cx="0" cy="0" r="9" fill="#1a1a1a"/>
-    <circle cx="0" cy="0" r="5" fill="#333"/>
-    <!-- Cockpit window -->
-    <circle cx="3" cy="-2" r="3" fill="#00ffff" opacity="0.7"/>
-    <circle cx="3" cy="-2" r="2" fill="#88ffff" opacity="0.5"/>
-    <!-- Left solar panel -->
-    <rect x="-38" y="-22" width="22" height="44" rx="2" fill="#1a2a1a" stroke="#2a4a2a" stroke-width="1"/>
-    <line x1="-38" y1="0" x2="-16" y2="0" stroke="#3a6a3a" stroke-width="1"/>
-    <line x1="-27" y1="-22" x2="-27" y2="22" stroke="#3a6a3a" stroke-width="1"/>
-    <!-- Right solar panel -->
-    <rect x="16" y="-22" width="22" height="44" rx="2" fill="#1a2a1a" stroke="#2a4a2a" stroke-width="1"/>
-    <line x1="16" y1="0" x2="38" y2="0" stroke="#3a6a3a" stroke-width="1"/>
-    <line x1="27" y1="-22" x2="27" y2="22" stroke="#3a6a3a" stroke-width="1"/>
-    <!-- Struts -->
-    <line x1="-16" y1="-10" x2="-12" y2="-8" stroke="#555" stroke-width="2"/>
-    <line x1="-16" y1="10" x2="-12" y2="8" stroke="#555" stroke-width="2"/>
-    <line x1="16" y1="-10" x2="12" y2="-8" stroke="#555" stroke-width="2"/>
-    <line x1="16" y1="10" x2="12" y2="8" stroke="#555" stroke-width="2"/>
+
+    <!-- Fuselage — mirrored (nose points left) -->
+    <polygon points="-38,0 -30,-4 20,-5 28,-3 28,3 20,5 -30,4" fill="#b8b0a0" stroke="#908878" stroke-width="0.5"/>
+    <polygon points="-38,0 -30,-3 -30,3" fill="#a8a090"/>
+    <line x1="18" y1="0" x2="-34" y2="0" stroke="#2a4a6a" stroke-width="2.5" opacity="0.6"/>
+    <!-- Cockpit -->
+    <ellipse cx="-18" cy="-3" rx="8" ry="3.5" fill="#6699bb" opacity="0.9" stroke="#88aacc" stroke-width="0.5"/>
+    <ellipse cx="-20" cy="-3" rx="5" ry="2" fill="#aaccee" opacity="0.5"/>
+
+    <!-- Top engines (mirrored) -->
+    <rect x="-6" y="-12" width="22" height="5" rx="2.5" fill="#a8a090" stroke="#908878" stroke-width="0.5"/>
+    <circle cx="18" cy="-9.5" r="3" fill="#0088ff" filter="url(#engineGlow)" opacity="0.9">
+      <animate attributeName="r" values="3;4.5;3" dur="0.15s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="14" y1="-9.5" x2="-6" y2="-9.5" stroke="#2a4a6a" stroke-width="1.5" opacity="0.6"/>
+    <rect x="-6" y="7" width="22" height="5" rx="2.5" fill="#a8a090" stroke="#908878" stroke-width="0.5"/>
+    <circle cx="18" cy="9.5" r="3" fill="#0088ff" filter="url(#engineGlow)" opacity="0.9">
+      <animate attributeName="r" values="3;4.5;3" dur="0.15s" repeatCount="indefinite"/>
+    </circle>
+    <line x1="14" y1="9.5" x2="-6" y2="9.5" stroke="#2a4a6a" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Wings — mirrored, swept forward (since ship faces left) -->
+    <polygon points="-10,-7 8,-7 20,-26 -2,-26" fill="#b0a898" stroke="#908878" stroke-width="0.5"/>
+    <line x1="6" y1="-8" x2="16" y2="-25" stroke="#2a4a6a" stroke-width="2" opacity="0.6"/>
+    <rect x="14" y="-27.5" width="10" height="3" rx="1.5" fill="#888070" stroke="#666050" stroke-width="0.5"/>
+    <circle cx="25" cy="-26" r="1.5" fill="#00ff44" opacity="0.6"/>
+
+    <polygon points="-10,7 8,7 20,26 -2,26" fill="#b0a898" stroke="#908878" stroke-width="0.5"/>
+    <line x1="6" y1="8" x2="16" y2="25" stroke="#2a4a6a" stroke-width="2" opacity="0.6"/>
+    <rect x="14" y="24.5" width="10" height="3" rx="1.5" fill="#888070" stroke="#666050" stroke-width="0.5"/>
+    <circle cx="25" cy="26" r="1.5" fill="#00ff44" opacity="0.6"/>
+
+    <!-- Blue wing-tip accents -->
+    <polygon points="18,-24 20,-26 -2,-26 0,-24" fill="#2a4a6a" opacity="0.5"/>
+    <polygon points="18,24 20,26 -2,26 0,24" fill="#2a4a6a" opacity="0.5"/>
 
     <!-- LASER SHOTS — green, fires left -->
-    <line x1="-14" y1="0" x2="-14" y2="0" stroke="#00ff44" stroke-width="3" filter="url(#laserGlow)">
-      <animate attributeName="x2" values="-14;-250;-250" dur="6s" begin="2s" repeatCount="indefinite"/>
-      <animate attributeName="x1" values="-14;-240;-240" dur="6s" begin="2s" repeatCount="indefinite"/>
+    <line x1="25" y1="-26" x2="25" y2="-26" stroke="#00ff44" stroke-width="3" filter="url(#laserGlow)">
+      <animate attributeName="x2" values="25;-200;-200" dur="6s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="x1" values="25;-190;-190" dur="6s" begin="2s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0;0;1;1;0;0;0;0;0;0;0" dur="6s" begin="2s" repeatCount="indefinite"/>
     </line>
-    <line x1="-14" y1="0" x2="-14" y2="0" stroke="#00ff44" stroke-width="3" filter="url(#laserGlow)">
-      <animate attributeName="x2" values="-14;-250;-250" dur="6s" begin="6s" repeatCount="indefinite"/>
-      <animate attributeName="x1" values="-14;-240;-240" dur="6s" begin="6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0;0;0;0;0;1;1;0;0;0;0;0" dur="6s" begin="6s" repeatCount="indefinite"/>
+    <line x1="25" y1="26" x2="25" y2="26" stroke="#00ff44" stroke-width="3" filter="url(#laserGlow)">
+      <animate attributeName="x2" values="25;-200;-200" dur="6s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="x1" values="25;-190;-190" dur="6s" begin="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0;0;1;1;0;0;0;0;0;0;0" dur="6s" begin="2s" repeatCount="indefinite"/>
     </line>
   </g>
 
-  <!-- ═══════════════════════════════ -->
-  <!--   SHIP 3 — small rebel scout   -->
-  <!--   diagonal flyby, FAST         -->
-  <!-- ═══════════════════════════════ -->
+  <!-- ═══════════════════════════════════════ -->
+  <!--  SHIP 3 — Small Z-95 scout              -->
+  <!--  diagonal flyby, FAST                   -->
+  <!-- ═══════════════════════════════════════ -->
   <g id="ship3">
     <animateTransform attributeName="transform" type="translate"
-      values="-80,-40; 980,180"
+      values="-100,-40; 1000,180"
       dur="4s" begin="6s" repeatCount="indefinite" calcMode="linear"/>
 
     <!-- Speed streaks -->
-    <line x1="-12" y1="0" x2="-60" y2="0" stroke="#ff9900" stroke-width="1" opacity="0.45" filter="url(#speedBlur)"/>
-    <line x1="-10" y1="-12" x2="-40" y2="-12" stroke="#ff7700" stroke-width="0.8" opacity="0.35"/>
-    <line x1="-10" y1="12" x2="-40" y2="12" stroke="#ff7700" stroke-width="0.8" opacity="0.35"/>
+    <line x1="-18" y1="0" x2="-70" y2="0" stroke="#ff9900" stroke-width="1.2" opacity="0.45" filter="url(#speedBlur)"/>
+    <line x1="-14" y1="-14" x2="-45" y2="-14" stroke="#ff7700" stroke-width="0.8" opacity="0.35"/>
+    <line x1="-14" y1="14" x2="-45" y2="14" stroke="#ff7700" stroke-width="0.8" opacity="0.35"/>
 
-    <!-- Engine trail — bigger -->
-    <ellipse cx="-14" cy="0" rx="22" ry="4" fill="#ff6600" opacity="0.4" filter="url(#engineGlow)">
+    <!-- Engine trail -->
+    <ellipse cx="-18" cy="0" rx="24" ry="4" fill="#ff6600" opacity="0.4" filter="url(#engineGlow)">
       <animate attributeName="opacity" values="0.4;0.8;0.4" dur="0.12s" repeatCount="indefinite"/>
-      <animate attributeName="rx" values="22;32;22" dur="0.12s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="24;36;24" dur="0.12s" repeatCount="indefinite"/>
     </ellipse>
-    <ellipse cx="-10" cy="0" rx="10" ry="2" fill="#ffaa00" opacity="0.7">
+    <ellipse cx="-12" cy="0" rx="10" ry="2" fill="#ffaa00" opacity="0.7">
       <animate attributeName="rx" values="10;16;10" dur="0.12s" repeatCount="indefinite"/>
     </ellipse>
-    <!-- Body -->
-    <ellipse cx="0" cy="0" rx="16" ry="5" fill="#aaa090"/>
-    <ellipse cx="5" cy="0" rx="12" ry="3.5" fill="#c0b8a0"/>
+
+    <!-- Smaller fuselage -->
+    <polygon points="26,0 20,-3 -14,-3.5 -18,-2 -18,2 -14,3.5 20,3" fill="#d0c8b0" stroke="#a09880" stroke-width="0.4"/>
+    <line x1="-12" y1="0" x2="24" y2="0" stroke="#8b2020" stroke-width="1.8" opacity="0.6"/>
     <!-- Cockpit -->
-    <ellipse cx="12" cy="-1" rx="5" ry="3" fill="#6699bb" opacity="0.9"/>
-    <!-- Wings -->
-    <polygon points="-4,-4 12,-4 8,-14 -6,-14" fill="#998880"/>
-    <polygon points="-4,4 12,4 8,14 -6,14" fill="#998880"/>
-    <!-- Engine pod glow — brighter -->
-    <circle cx="-9" cy="-12" r="3" fill="#ff5500" filter="url(#engineGlow)" opacity="0.9">
-      <animate attributeName="r" values="3;4.5;3" dur="0.12s" repeatCount="indefinite"/>
+    <ellipse cx="12" cy="-2" rx="5.5" ry="2.5" fill="#6699bb" opacity="0.9"/>
+
+    <!-- Engine pods -->
+    <rect x="-10" y="-8" width="14" height="3.5" rx="1.8" fill="#c0b8a0" stroke="#a09880" stroke-width="0.4"/>
+    <circle cx="-12" cy="-6.2" r="2" fill="#ff6600" filter="url(#engineGlow)" opacity="0.9">
+      <animate attributeName="r" values="2;3.2;2" dur="0.12s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="-9" cy="12" r="3" fill="#ff5500" filter="url(#engineGlow)" opacity="0.9">
-      <animate attributeName="r" values="3;4.5;3" dur="0.12s" repeatCount="indefinite"/>
+    <rect x="-10" y="4.5" width="14" height="3.5" rx="1.8" fill="#c0b8a0" stroke="#a09880" stroke-width="0.4"/>
+    <circle cx="-12" cy="6.2" r="2" fill="#ff6600" filter="url(#engineGlow)" opacity="0.9">
+      <animate attributeName="r" values="2;3.2;2" dur="0.12s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- Quick double laser burst -->
-    <line x1="16" y1="-1" x2="16" y2="-1" stroke="#ff4444" stroke-width="2" filter="url(#laserGlow)">
-      <animate attributeName="x2" values="16;160;160" dur="4s" begin="6s" repeatCount="indefinite"/>
-      <animate attributeName="x1" values="16;152;152" dur="4s" begin="6s" repeatCount="indefinite"/>
+    <!-- Wings -->
+    <polygon points="6,-5 -6,-5 -14,-18 0,-18" fill="#d0c8b0" stroke="#a09880" stroke-width="0.4"/>
+    <line x1="-4" y1="-6" x2="-10" y2="-17" stroke="#8b2020" stroke-width="1.5" opacity="0.6"/>
+    <rect x="-17" y="-19.5" width="7" height="2.2" rx="1" fill="#999080"/>
+    <polygon points="6,5 -6,5 -14,18 0,18" fill="#d0c8b0" stroke="#a09880" stroke-width="0.4"/>
+    <line x1="-4" y1="6" x2="-10" y2="17" stroke="#8b2020" stroke-width="1.5" opacity="0.6"/>
+    <rect x="-17" y="17.3" width="7" height="2.2" rx="1" fill="#999080"/>
+
+    <!-- Quick double laser burst from wingtips -->
+    <line x1="-17" y1="-18.5" x2="-17" y2="-18.5" stroke="#ff4444" stroke-width="2" filter="url(#laserGlow)">
+      <animate attributeName="x2" values="-17;140;140" dur="4s" begin="6s" repeatCount="indefinite"/>
+      <animate attributeName="x1" values="-17;132;132" dur="4s" begin="6s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0;0;1;0;0;0;0" dur="4s" begin="6s" repeatCount="indefinite"/>
     </line>
-    <line x1="16" y1="-1" x2="16" y2="-1" stroke="#ff4444" stroke-width="2" filter="url(#laserGlow)">
-      <animate attributeName="x2" values="16;160;160" dur="4s" begin="6.2s" repeatCount="indefinite"/>
-      <animate attributeName="x1" values="16;152;152" dur="4s" begin="6.2s" repeatCount="indefinite"/>
+    <line x1="-17" y1="18.5" x2="-17" y2="18.5" stroke="#ff4444" stroke-width="2" filter="url(#laserGlow)">
+      <animate attributeName="x2" values="-17;140;140" dur="4s" begin="6.2s" repeatCount="indefinite"/>
+      <animate attributeName="x1" values="-17;132;132" dur="4s" begin="6.2s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0;0;1;0;0;0;0" dur="4s" begin="6.2s" repeatCount="indefinite"/>
     </line>
   </g>
 
   <!-- ═══════════════════════════════ -->
   <!--     STAR WARS TEXT CRAWL       -->
-  <!--  Perspective tilt via scaleY   -->
+  <!--  Wider, bigger, perspective    -->
   <!-- ═══════════════════════════════ -->
   <g clip-path="url(#crawlClip)">
-    <!-- Apply perspective-like compression: text compressed vertically + slight skew -->
-    <g transform="translate(450, 40) scale(1, 0.48) translate(-450, 0)">
-      <!-- Crawl text group — scrolls upward -->
+    <!-- Perspective compression — less aggressive for readability -->
+    <g transform="translate(450, 30) scale(1, 0.5) translate(-450, 0)">
       <g>
         <animateTransform attributeName="transform" type="translate"
           values="0,820; 0,-800"
@@ -307,63 +370,62 @@
 
         <!-- EPISODE LINE -->
         <text x="450" y="0" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="16" font-weight="bold"
-          fill="#4a8aff" letter-spacing="8" filter="url(#textGlow)">EPISODE I</text>
+          font-family="'Times New Roman', serif" font-size="20" font-weight="bold"
+          fill="#4a8aff" letter-spacing="10" filter="url(#textGlow)">EPISODE I</text>
 
-        <!-- Title -->
-        <text x="450" y="70" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="42" font-weight="bold"
-          fill="#FFE81F" filter="url(#textGlow)" letter-spacing="4">CARLOS</text>
-        <text x="450" y="120" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="22" font-weight="bold"
-          fill="#FFE81F" filter="url(#textGlow)" letter-spacing="6">THE DATA BUILDER</text>
+        <!-- Title — big and bold -->
+        <text x="450" y="80" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="56" font-weight="bold"
+          fill="#FFE81F" filter="url(#textGlow)" letter-spacing="6">CARLOS</text>
+        <text x="450" y="135" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="28" font-weight="bold"
+          fill="#FFE81F" filter="url(#textGlow)" letter-spacing="8">THE DATA BUILDER</text>
 
-        <!-- Spacer -->
-        <text x="450" y="180" text-anchor="middle" fill="none">.</text>
+        <text x="450" y="200" text-anchor="middle" fill="none">.</text>
 
-        <!-- Body crawl text — italic, centered, yellow -->
-        <text x="450" y="230" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">A long time ago in a galaxy not so</text>
-        <text x="450" y="262" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">far away, a builder emerged at the</text>
-        <text x="450" y="294" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">intersection of DATA and STRATEGY.</text>
+        <!-- Body crawl text — bigger font -->
+        <text x="450" y="260" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
+          fill="#FFE81F" filter="url(#textGlow)">A long time ago in a galaxy not so far away,</text>
+        <text x="450" y="300" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
+          fill="#FFE81F" filter="url(#textGlow)">a builder emerged at the intersection</text>
+        <text x="450" y="340" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
+          fill="#FFE81F" filter="url(#textGlow)">of DATA and STRATEGY.</text>
 
-        <text x="450" y="360" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
+        <text x="450" y="410" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
           fill="#FFE81F" filter="url(#textGlow)">Finishing an MSc in Business Analytics</text>
-        <text x="450" y="392" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
+        <text x="450" y="450" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
           fill="#FFE81F" filter="url(#textGlow)">at Esade, armed with 2+ years in</text>
-        <text x="450" y="424" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
+        <text x="450" y="490" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
           fill="#FFE81F" filter="url(#textGlow)">market analysis and marketing.</text>
 
-        <text x="450" y="490" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
+        <text x="450" y="560" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
           fill="#FFE81F" filter="url(#textGlow)">I don't just analyze data.</text>
-        <text x="450" y="522" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
+        <text x="450" y="600" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
           fill="#FFE81F" filter="url(#textGlow)">I build tools that solve real problems.</text>
 
-        <text x="450" y="590" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
+        <text x="450" y="680" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
           fill="#FFE81F" filter="url(#textGlow)">South Africa · The Netherlands · Spain</text>
-        <text x="450" y="622" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="18" font-style="italic"
+        <text x="450" y="720" text-anchor="middle"
+          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
           fill="#FFE81F" filter="url(#textGlow)">Builder. Problem solver. Explorer.</text>
       </g>
     </g>
   </g>
 
-  <!-- Top and bottom fade overlays so text appears/disappears smoothly -->
+  <!-- Top and bottom fade overlays -->
   <rect x="0" y="0" width="900" height="100" fill="url(#fadeTop)"/>
   <rect x="0" y="300" width="900" height="100" fill="url(#fadeBottom)"/>
 
-  <!-- Left/right edge darkening — wider for perspective framing -->
-  <rect x="0" y="0" width="130" height="400" fill="black" opacity="0.6"/>
-  <rect x="770" y="0" width="130" height="400" fill="black" opacity="0.6"/>
+  <!-- Left/right edge darkening — narrower for wider text -->
+  <rect x="0" y="0" width="70" height="400" fill="black" opacity="0.5"/>
+  <rect x="830" y="0" width="70" height="400" fill="black" opacity="0.5"/>
 </svg>

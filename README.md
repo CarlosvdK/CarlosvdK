@@ -53,17 +53,6 @@ Here are some things I've been working on:
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=github_dark&hide_border=true)
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=github-dark-blue&hide_border=true)
-
-</div>
-
----
-
 ## 🎯 About Me
 
 - 🎓 Completing an **MSc in Business Analytics** @ **ESADE Business School**

@@ -10,9 +10,7 @@
 
 **Business Analytics MSc @ Esade · Data & Strategy · Builder**
 
-IN A GALAXY NOT SO FAR AWAY…
-A business-trained builder is finishing an MSc in Business Analytics at ESADE...
-With 2 years in market analysis and marketing at SoftwareOne and TTNL, I'm learning how to build SaaS products that are genuinely useful—focused on solutions, not just software (and whatever else I find fun to explore).
+Business background, builder mindset. I’m finishing an MSc in Business Analytics at ESADE. With 2 years of experience in market analysis and marketing at SoftwareOne and TTNL, I’m focused on building practical SaaS products—tools that solve real problems, not just software for its own sake.
 
 <img src="assets/icons/pin.svg" width="18" height="18" /> Barcelona · <img src="assets/icons/globe.svg" width="18" height="18" /> Lived in South Africa, The Netherlands, Spain
 <img src="assets/icons/speech.svg" width="18" height="18" /> English · Dutch · Afrikaans

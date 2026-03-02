@@ -103,12 +103,14 @@ Workflow automations (ingest → enrich → notify).
 
 ## <img src="assets/icons/mail.svg" width="22" height="22" /> Let's Connect
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_USERNAME)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/carlos-van-der-kooij-272122226/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME)
 
 ---
 
 <div align="center">
+
+## <img src="assets/icons/target.svg" width="22" height="22" /> Contributions
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CarlosvdK/CarlosvdK/output/snake-dark.svg" />

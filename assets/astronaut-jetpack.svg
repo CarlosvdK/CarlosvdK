@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220">
   <defs>
     <filter id="jg"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
     <filter id="js"><feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-    <filter id="jd"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="jd"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="jbig"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <!-- Glow for jetpack upgrades -->
+    <filter id="jpulse"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
 
   <!-- ╔══════════════════════╗ -->
@@ -17,255 +20,321 @@
   <circle cx="220" cy="8" r="0.8" fill="white" opacity="0.2"><animate attributeName="cx" values="220;650;220" dur="23s" repeatCount="indefinite"/></circle>
 
   <!-- Ground -->
-  <line x1="0" y1="178" x2="600" y2="178" stroke="#1a2a4a" stroke-width="0.8" opacity="0.3"/>
+  <line x1="0" y1="195" x2="600" y2="195" stroke="#1a2a4a" stroke-width="0.8" opacity="0.3"/>
 
-  <!-- ╔══════════════════════════════════════════════════╗ -->
-  <!-- ║  10 TOOLS — fly from far right, held by astronaut ║ -->
-  <!-- ║  Each: appear → fly 1.5s → held till next → fade  ║ -->
-  <!-- ║  16s total loop                                    ║ -->
-  <!-- ╚══════════════════════════════════════════════════╝ -->
+  <!-- ╔══════════════════════════════════════════════════════════╗ -->
+  <!-- ║  10 TOOLS — coding/tech themed                           ║ -->
+  <!-- ║  Fly from far right, astronaut holds each until next     ║ -->
+  <!-- ║  20s total loop                                           ║ -->
+  <!-- ╚══════════════════════════════════════════════════════════╝ -->
 
-  <!-- TOOL 1: WRENCH — appear 0s, arrive 1.5s, fade 2.3s -->
+  <!-- TOOL 1: PYTHON LOGO — appear 0s, arrive 1.8s, fade 2.8s -->
   <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.094; 0.143; 0.144; 1" values="1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.094; 0.144; 1" values="750,60; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.094; 1" values="30,0,0; 0,0,0; 0,0,0"/>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.090; 0.140; 0.141; 1" values="1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.090; 0.141; 1" values="780,55; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.090; 1" values="25,0,0; 0,0,0; 0,0,0"/>
+    <g stroke="#4a8aff" stroke-width="1.4" fill="none">
+      <!-- Python snake shape -->
+      <path d="M-2,-16 C-2,-20 2,-20 6,-18 C10,-16 10,-12 10,-8 L10,0 L2,0 L2,-4 L-6,-4 L-6,0 L-6,8 C-6,12 -2,16 2,16 L10,16" opacity="0.9"/>
+      <circle cx="-1" cy="-14" r="2" fill="#4a8aff" opacity="0.6"/>
+      <circle cx="7" cy="12" r="2" fill="#4a8aff" opacity="0.6"/>
+      <text x="2" y="26" text-anchor="middle" fill="#4a8aff" font-size="7" font-family="monospace" font-weight="bold" opacity="0.7">PY</text>
+    </g>
+  </g>
+
+  <!-- TOOL 2: JAVASCRIPT / JS — appear 1.0s, arrive 2.8s, fade 3.8s -->
+  <g>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.049; 0.050; 0.140; 0.190; 0.191; 1" values="0; 0; 1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.050; 0.140; 0.191; 1" values="800,40; 800,40; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.050; 0.140; 1" values="0,0,0; -18,0,0; 0,0,0; 0,0,0"/>
+    <g stroke="#4a8aff" stroke-width="1.4" fill="none">
+      <rect x="-14" y="-14" width="28" height="28" rx="3" opacity="0.9"/>
+      <text x="0" y="6" text-anchor="middle" fill="#4a8aff" font-size="16" font-family="monospace" font-weight="bold" opacity="0.8">JS</text>
+    </g>
+  </g>
+
+  <!-- TOOL 3: AWS CLOUD — appear 2.0s, arrive 3.8s, fade 4.8s -->
+  <g>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.099; 0.100; 0.190; 0.240; 0.241; 1" values="0; 0; 1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.100; 0.190; 0.241; 1" values="770,80; 770,80; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.100; 0.190; 1" values="0,0,0; 15,0,0; 0,0,0; 0,0,0"/>
+    <g stroke="#4a8aff" stroke-width="1.4" fill="none">
+      <!-- Cloud shape -->
+      <path d="M-14,6 C-18,6 -20,0 -16,-4 C-16,-10 -10,-14 -4,-12 C-2,-18 8,-18 10,-12 C16,-12 18,-6 14,-2 C18,2 16,6 10,6 Z" opacity="0.9"/>
+      <text x="0" y="3" text-anchor="middle" fill="#4a8aff" font-size="8" font-family="monospace" font-weight="bold" opacity="0.7">AWS</text>
+    </g>
+  </g>
+
+  <!-- TOOL 4: REACT ATOM — appear 3.0s, arrive 4.8s, fade 5.8s -->
+  <g>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.149; 0.150; 0.240; 0.290; 0.291; 1" values="0; 0; 1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.150; 0.240; 0.291; 1" values="790,50; 790,50; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.150; 0.240; 1" values="0,0,0; 30,0,0; 0,0,0; 0,0,0"/>
+    <g stroke="#4a8aff" stroke-width="1.2" fill="none">
+      <!-- React orbits -->
+      <ellipse cx="0" cy="0" rx="16" ry="6" opacity="0.7"/>
+      <ellipse cx="0" cy="0" rx="16" ry="6" transform="rotate(60)" opacity="0.7"/>
+      <ellipse cx="0" cy="0" rx="16" ry="6" transform="rotate(-60)" opacity="0.7"/>
+      <circle cx="0" cy="0" r="3.5" fill="#4a8aff" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- TOOL 5: DATABASE / SQL — appear 4.0s, arrive 5.8s, fade 6.8s -->
+  <g>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.199; 0.200; 0.290; 0.340; 0.341; 1" values="0; 0; 1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.200; 0.290; 0.341; 1" values="760,70; 760,70; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.200; 0.290; 1" values="0,0,0; -12,0,0; 0,0,0; 0,0,0"/>
+    <g stroke="#4a8aff" stroke-width="1.4" fill="none">
+      <!-- Database cylinder -->
+      <ellipse cx="0" cy="-10" rx="12" ry="5" opacity="0.9"/>
+      <line x1="-12" y1="-10" x2="-12" y2="10" opacity="0.8"/>
+      <line x1="12" y1="-10" x2="12" y2="10" opacity="0.8"/>
+      <ellipse cx="0" cy="10" rx="12" ry="5" opacity="0.9"/>
+      <ellipse cx="0" cy="0" rx="12" ry="5" opacity="0.4" stroke-dasharray="3 2"/>
+      <text x="0" y="3" text-anchor="middle" fill="#4a8aff" font-size="6" font-family="monospace" font-weight="bold" opacity="0.5">SQL</text>
+    </g>
+  </g>
+
+  <!-- TOOL 6: GIT BRANCH — appear 5.0s, arrive 6.8s, fade 7.8s -->
+  <g>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.249; 0.250; 0.340; 0.390; 0.391; 1" values="0; 0; 1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.250; 0.340; 0.391; 1" values="800,35; 800,35; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.250; 0.340; 1" values="0,0,0; -20,0,0; 0,0,0; 0,0,0"/>
     <g stroke="#4a8aff" stroke-width="1.8" fill="none" stroke-linecap="round">
-      <line x1="-12" y1="6" x2="8" y2="-6"/>
-      <circle cx="11" cy="-9" r="5.5" opacity="0.9"/>
-      <path d="M8,-14 L14,-14 L14,-4" stroke-width="1.2" opacity="0.6"/>
-      <circle cx="11" cy="-9" r="2" fill="#4a8aff" opacity="0.3"/>
+      <!-- Git branch lines -->
+      <line x1="0" y1="14" x2="0" y2="-6" opacity="0.8"/>
+      <path d="M0,-6 C0,-10 8,-14 8,-6" opacity="0.7"/>
+      <circle cx="0" cy="14" r="3.5" opacity="0.9"/>
+      <circle cx="0" cy="-6" r="3.5" opacity="0.9"/>
+      <circle cx="8" cy="-6" r="3.5" fill="#4a8aff" opacity="0.4"/>
     </g>
   </g>
 
-  <!-- TOOL 2: GAS CANISTER — appear 0.8s, arrive 2.3s, fade 3.1s -->
+  <!-- TOOL 7: DOCKER CONTAINER — appear 6.0s, arrive 7.8s, fade 8.8s -->
   <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.049; 0.050; 0.144; 0.193; 0.194; 1" values="0; 0; 1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.050; 0.144; 0.194; 1" values="780,40; 780,40; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.050; 0.144; 1" values="0,0,0; -20,0,0; 0,0,0; 0,0,0"/>
-    <g stroke="#4a8aff" stroke-width="1.6" fill="none">
-      <rect x="-7" y="-14" width="14" height="28" rx="3.5" opacity="0.9"/>
-      <rect x="-5" y="-18" width="10" height="5" rx="2" opacity="0.7"/>
-      <line x1="-5" y1="-4" x2="5" y2="-4" stroke-width="1" opacity="0.5"/>
-      <line x1="-5" y1="4" x2="5" y2="4" stroke-width="1" opacity="0.5"/>
-      <text x="0" y="1" text-anchor="middle" fill="#4a8aff" font-size="6" font-family="monospace" opacity="0.4">GAS</text>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.299; 0.300; 0.390; 0.440; 0.441; 1" values="0; 0; 1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.300; 0.390; 0.441; 1" values="770,90; 770,90; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.300; 0.390; 1" values="0,0,0; 22,0,0; 0,0,0; 0,0,0"/>
+    <g stroke="#4a8aff" stroke-width="1.4" fill="none">
+      <!-- Docker whale shape -->
+      <path d="M-16,2 L-16,-6 L16,-6 L16,2 C16,8 8,12 0,12 C-8,12 -16,8 -16,2 Z" opacity="0.8"/>
+      <!-- Container boxes on whale -->
+      <rect x="-12" y="-10" width="6" height="5" rx="0.5" opacity="0.6"/>
+      <rect x="-4" y="-10" width="6" height="5" rx="0.5" opacity="0.6"/>
+      <rect x="4" y="-10" width="6" height="5" rx="0.5" opacity="0.6"/>
+      <rect x="-8" y="-16" width="6" height="5" rx="0.5" opacity="0.6"/>
+      <rect x="0" y="-16" width="6" height="5" rx="0.5" opacity="0.6"/>
     </g>
   </g>
 
-  <!-- TOOL 3: THRUSTER NOZZLE — appear 1.6s, arrive 3.1s, fade 3.9s -->
+  <!-- TOOL 8: TERMINAL / CLI — appear 7.0s, arrive 8.8s, fade 9.8s -->
   <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.099; 0.100; 0.194; 0.243; 0.244; 1" values="0; 0; 1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.100; 0.194; 0.244; 1" values="760,85; 760,85; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.100; 0.194; 1" values="0,0,0; 25,0,0; 0,0,0; 0,0,0"/>
-    <g stroke="#4a8aff" stroke-width="1.6" fill="none">
-      <polygon points="0,-12 12,2 10,14 -10,14 -12,2" opacity="0.9"/>
-      <line x1="-8" y1="14" x2="8" y2="14" stroke-width="2" opacity="0.7"/>
-      <circle cx="0" cy="0" r="3" fill="#4a8aff" opacity="0.25"/>
-      <line x1="-3" y1="8" x2="3" y2="8" stroke-width="1" opacity="0.4"/>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.349; 0.350; 0.440; 0.490; 0.491; 1" values="0; 0; 1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.350; 0.440; 0.491; 1" values="780,45; 780,45; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.350; 0.440; 1" values="0,0,0; -15,0,0; 0,0,0; 0,0,0"/>
+    <g stroke="#4a8aff" stroke-width="1.4" fill="none">
+      <rect x="-16" y="-12" width="32" height="24" rx="3" opacity="0.9"/>
+      <!-- Terminal prompt > -->
+      <polyline points="-10,-4 -4,0 -10,4" stroke-width="2" opacity="0.8"/>
+      <!-- Cursor line -->
+      <line x1="0" y1="0" x2="10" y2="0" stroke-width="1.5" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0;0.6" dur="1s" repeatCount="indefinite"/>
+      </line>
+      <!-- Title bar dots -->
+      <circle cx="-11" cy="-8" r="1.3" fill="#4a8aff" opacity="0.5"/>
+      <circle cx="-7" cy="-8" r="1.3" fill="#4a8aff" opacity="0.4"/>
+      <circle cx="-3" cy="-8" r="1.3" fill="#4a8aff" opacity="0.3"/>
     </g>
   </g>
 
-  <!-- TOOL 4: CIRCUIT BOARD — appear 2.4s, arrive 3.9s, fade 4.7s -->
+  <!-- TOOL 9: API / BRACKETS — appear 8.0s, arrive 9.8s, fade 10.8s -->
   <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.149; 0.150; 0.244; 0.293; 0.294; 1" values="0; 0; 1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.150; 0.244; 0.294; 1" values="770,50; 770,50; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.150; 0.244; 1" values="0,0,0; -15,0,0; 5,0,0; 5,0,0"/>
-    <g stroke="#4a8aff" stroke-width="1.5" fill="none">
-      <rect x="-14" y="-10" width="28" height="20" rx="2" opacity="0.9"/>
-      <line x1="-10" y1="-5" x2="-2" y2="-5" stroke-width="1" opacity="0.5"/>
-      <line x1="-2" y1="-5" x2="-2" y2="5" stroke-width="1" opacity="0.5"/>
-      <line x1="4" y1="-5" x2="10" y2="-5" stroke-width="1" opacity="0.5"/>
-      <circle cx="7" cy="3" r="2.5" opacity="0.6"/>
-      <rect x="-10" y="2" width="5" height="4" rx="0.5" opacity="0.4"/>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.399; 0.400; 0.490; 0.540; 0.541; 1" values="0; 0; 1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.400; 0.490; 0.541; 1" values="790,60; 790,60; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.400; 0.490; 1" values="0,0,0; 18,0,0; 0,0,0; 0,0,0"/>
+    <g stroke="#4a8aff" stroke-width="2" fill="none" stroke-linecap="round">
+      <!-- Curly braces { } -->
+      <path d="M-10,-14 C-14,-14 -14,-8 -16,-4 C-14,0 -14,6 -10,10" opacity="0.9"/>
+      <path d="M10,-14 C14,-14 14,-8 16,-4 C14,0 14,6 10,10" opacity="0.9"/>
+      <!-- Slash -->
+      <line x1="4" y1="-10" x2="-4" y2="6" stroke-width="1.5" opacity="0.6"/>
+      <text x="0" y="22" text-anchor="middle" fill="#4a8aff" font-size="7" font-family="monospace" font-weight="bold" opacity="0.7">API</text>
     </g>
   </g>
 
-  <!-- TOOL 5: BATTERY / FUEL CELL — appear 3.2s, arrive 4.7s, fade 5.5s -->
+  <!-- TOOL 10: JAVA / COFFEE CUP — appear 9.0s, arrive 10.8s, fade 11.2s -->
   <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.199; 0.200; 0.294; 0.343; 0.344; 1" values="0; 0; 1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.200; 0.294; 0.344; 1" values="740,75; 740,75; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.200; 0.294; 1" values="0,0,0; 20,0,0; 0,0,0; 0,0,0"/>
-    <g stroke="#4a8aff" stroke-width="1.5" fill="none">
-      <rect x="-10" y="-8" width="20" height="16" rx="2" opacity="0.9"/>
-      <line x1="-13" y1="0" x2="-10" y2="0" stroke-width="2" opacity="0.7"/>
-      <line x1="10" y1="-3" x2="14" y2="-3" stroke-width="1.5" opacity="0.6"/>
-      <line x1="10" y1="3" x2="14" y2="3" stroke-width="1.5" opacity="0.6"/>
-      <line x1="12" y1="-3" x2="12" y2="3" stroke-width="1.5" opacity="0.6"/>
-      <rect x="-6" y="-4" width="8" height="8" rx="1" fill="#4a8aff" opacity="0.15"/>
-      <text x="0" y="2" text-anchor="middle" fill="#4a8aff" font-size="5" font-family="monospace" opacity="0.5">PWR</text>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.449; 0.450; 0.540; 0.560; 0.561; 1" values="0; 0; 1; 1; 1; 0; 0"/>
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.450; 0.540; 0.561; 1" values="760,50; 760,50; 280,100; 280,100; 280,100"/>
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.450; 0.540; 1" values="0,0,0; -22,0,0; 0,0,0; 0,0,0"/>
+    <g stroke="#4a8aff" stroke-width="1.4" fill="none">
+      <!-- Coffee mug -->
+      <rect x="-10" y="-6" width="18" height="18" rx="2" opacity="0.9"/>
+      <!-- Handle -->
+      <path d="M8,-2 C14,-2 14,8 8,8" opacity="0.7"/>
+      <!-- Steam -->
+      <path d="M-4,-10 C-4,-14 0,-14 0,-10" stroke-width="1" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.2;0.5" dur="1.2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M4,-10 C4,-16 8,-16 8,-10" stroke-width="1" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.1;0.4" dur="1.2s" begin="0.4s" repeatCount="indefinite"/>
+      </path>
+      <text x="-1" y="8" text-anchor="middle" fill="#4a8aff" font-size="7" font-family="monospace" font-weight="bold" opacity="0.6">J</text>
     </g>
   </g>
 
-  <!-- TOOL 6: METAL PLATE — appear 4.0s, arrive 5.5s, fade 6.3s -->
-  <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.249; 0.250; 0.344; 0.393; 0.394; 1" values="0; 0; 1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.250; 0.344; 0.394; 1" values="780,35; 780,35; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.250; 0.344; 1" values="0,0,0; -10,0,0; 0,0,0; 0,0,0"/>
-    <g stroke="#4a8aff" stroke-width="1.5" fill="none">
-      <rect x="-16" y="-6" width="32" height="12" rx="1.5" opacity="0.9"/>
-      <circle cx="-11" cy="0" r="2" opacity="0.5"/>
-      <circle cx="0" cy="0" r="2" opacity="0.5"/>
-      <circle cx="11" cy="0" r="2" opacity="0.5"/>
-      <line x1="-16" y1="-2" x2="16" y2="-2" stroke-width="0.6" opacity="0.3"/>
-    </g>
-  </g>
-
-  <!-- TOOL 7: GEAR — appear 4.8s, arrive 6.3s, fade 7.1s -->
-  <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.299; 0.300; 0.394; 0.443; 0.444; 1" values="0; 0; 1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.300; 0.394; 0.444; 1" values="760,90; 760,90; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.300; 0.394; 1" values="0,0,0; 60,0,0; 0,0,0; 0,0,0"/>
-    <g stroke="#4a8aff" stroke-width="1.5" fill="none">
-      <circle cx="0" cy="0" r="10" stroke-dasharray="7 3.5" opacity="0.8"/>
-      <circle cx="0" cy="0" r="5" opacity="0.7"/>
-      <circle cx="0" cy="0" r="2" fill="#4a8aff" opacity="0.3"/>
-    </g>
-  </g>
-
-  <!-- TOOL 8: PIPE CONNECTOR — appear 5.6s, arrive 7.1s, fade 7.9s -->
-  <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.349; 0.350; 0.444; 0.493; 0.494; 1" values="0; 0; 1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.350; 0.444; 0.494; 1" values="750,45; 750,45; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.350; 0.444; 1" values="0,0,0; -30,0,0; 0,0,0; 0,0,0"/>
-    <g stroke="#4a8aff" stroke-width="1.5" fill="none">
-      <rect x="-16" y="-5" width="32" height="10" rx="5" opacity="0.9"/>
-      <ellipse cx="-16" cy="0" rx="2" ry="5" opacity="0.6"/>
-      <ellipse cx="16" cy="0" rx="2" ry="5" opacity="0.6"/>
-      <line x1="-6" y1="-5" x2="-6" y2="5" stroke-width="1" opacity="0.4"/>
-      <line x1="6" y1="-5" x2="6" y2="5" stroke-width="1" opacity="0.4"/>
-    </g>
-  </g>
-
-  <!-- TOOL 9: ANTENNA DISH — appear 6.4s, arrive 7.9s, fade 8.7s -->
-  <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.399; 0.400; 0.494; 0.543; 0.544; 1" values="0; 0; 1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.400; 0.494; 0.544; 1" values="770,70; 770,70; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.400; 0.494; 1" values="0,0,0; 15,0,0; 0,0,0; 0,0,0"/>
-    <g stroke="#4a8aff" stroke-width="1.5" fill="none">
-      <line x1="0" y1="14" x2="0" y2="-2" stroke-width="1.8" opacity="0.7"/>
-      <path d="M-10,-8 C-6,-14, 6,-14, 10,-8 L0,0 Z" opacity="0.8"/>
-      <circle cx="0" cy="-12" r="2" fill="#4a8aff" opacity="0.5">
-        <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
-      </circle>
-    </g>
-  </g>
-
-  <!-- TOOL 10: CONTROL PANEL — appear 7.2s, arrive 8.7s, fade 9.2s -->
-  <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.449; 0.450; 0.544; 0.574; 0.575; 1" values="0; 0; 1; 1; 1; 0; 0"/>
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.450; 0.544; 0.575; 1" values="740,55; 740,55; 290,92; 290,92; 290,92"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.450; 0.544; 1" values="0,0,0; -12,0,0; 0,0,0; 0,0,0"/>
-    <g stroke="#4a8aff" stroke-width="1.5" fill="none">
-      <rect x="-12" y="-9" width="24" height="18" rx="2.5" opacity="0.9"/>
-      <circle cx="-6" cy="-3" r="2.5" fill="#4a8aff" opacity="0.3">
-        <animate attributeName="opacity" values="0.3;0.6;0.3" dur="0.8s" repeatCount="indefinite"/>
-      </circle>
-      <rect x="1" y="-5" width="8" height="4" rx="1" opacity="0.6"/>
-      <line x1="-6" y1="4" x2="6" y2="4" stroke-width="0.8" opacity="0.4"/>
-      <circle cx="6" cy="-3" r="1" fill="#4a8aff" opacity="0.4"/>
-    </g>
-  </g>
-
-  <!-- ╔══════════════════════════════════════════╗ -->
-  <!-- ║  ABSORPTION FLASH — pulses at jetpack     ║ -->
-  <!-- ║  when each tool is absorbed               ║ -->
-  <!-- ╚══════════════════════════════════════════╝ -->
-  <circle cx="268" cy="105" r="8" fill="#4a8aff" filter="url(#jg)">
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.140; 0.144; 0.150; 0.190; 0.194; 0.200; 0.240; 0.244; 0.250; 0.290; 0.294; 0.300; 0.340; 0.344; 0.350; 0.390; 0.394; 0.400; 0.440; 0.444; 0.450; 0.490; 0.494; 0.500; 0.540; 0.544; 0.550; 0.571; 0.575; 0.580; 1"
-      values="0; 0; 0.8; 0; 0; 0.8; 0; 0; 0.8; 0; 0; 0.8; 0; 0; 0.8; 0; 0; 0.8; 0; 0; 0.8; 0; 0; 0.8; 0; 0; 0.8; 0; 0; 0.8; 0; 0"/>
-    <animate attributeName="r" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.140; 0.144; 0.150; 0.190; 0.194; 0.200; 0.240; 0.244; 0.250; 0.290; 0.294; 0.300; 0.340; 0.344; 0.350; 0.390; 0.394; 0.400; 0.440; 0.444; 0.450; 0.490; 0.494; 0.500; 0.540; 0.544; 0.550; 0.571; 0.575; 0.580; 1"
-      values="4; 4; 12; 4; 4; 12; 4; 4; 12; 4; 4; 12; 4; 4; 12; 4; 4; 12; 4; 4; 12; 4; 4; 12; 4; 4; 12; 4; 4; 12; 4; 4"/>
+  <!-- ╔══════════════════════════════════════════════════════╗ -->
+  <!-- ║  ABSORPTION FLASH — BIG pulse when each tool fades   ║ -->
+  <!-- ║  + shockwave ring expanding outward                   ║ -->
+  <!-- ╚══════════════════════════════════════════════════════╝ -->
+  <!-- Core flash -->
+  <circle cx="258" cy="110" r="8" fill="#4a8aff" filter="url(#jpulse)">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.138; 0.141; 0.148; 0.188; 0.191; 0.198; 0.238; 0.241; 0.248; 0.288; 0.291; 0.298; 0.338; 0.341; 0.348; 0.388; 0.391; 0.398; 0.438; 0.441; 0.448; 0.488; 0.491; 0.498; 0.538; 0.541; 0.548; 0.558; 0.561; 0.568; 1"
+      values="0; 0; 1; 0; 0; 1; 0; 0; 1; 0; 0; 1; 0; 0; 1; 0; 0; 1; 0; 0; 1; 0; 0; 1; 0; 0; 1; 0; 0; 1; 0; 0"/>
+    <animate attributeName="r" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.138; 0.141; 0.148; 0.188; 0.191; 0.198; 0.238; 0.241; 0.248; 0.288; 0.291; 0.298; 0.338; 0.341; 0.348; 0.388; 0.391; 0.398; 0.438; 0.441; 0.448; 0.488; 0.491; 0.498; 0.538; 0.541; 0.548; 0.558; 0.561; 0.568; 1"
+      values="4; 4; 18; 4; 4; 18; 4; 4; 18; 4; 4; 18; 4; 4; 18; 4; 4; 18; 4; 4; 18; 4; 4; 18; 4; 4; 18; 4; 4; 18; 4; 4"/>
+  </circle>
+  <!-- Shockwave ring -->
+  <circle cx="258" cy="110" fill="none" stroke="#4a8aff" stroke-width="1.5">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.138; 0.141; 0.155; 0.188; 0.191; 0.205; 0.238; 0.241; 0.255; 0.288; 0.291; 0.305; 0.338; 0.341; 0.355; 0.388; 0.391; 0.405; 0.438; 0.441; 0.455; 0.488; 0.491; 0.505; 0.538; 0.541; 0.555; 0.558; 0.561; 0.575; 1"
+      values="0; 0; 0.7; 0; 0; 0.7; 0; 0; 0.7; 0; 0; 0.7; 0; 0; 0.7; 0; 0; 0.7; 0; 0; 0.7; 0; 0; 0.7; 0; 0; 0.7; 0; 0; 0.7; 0; 0"/>
+    <animate attributeName="r" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.138; 0.141; 0.155; 0.188; 0.191; 0.205; 0.238; 0.241; 0.255; 0.288; 0.291; 0.305; 0.338; 0.341; 0.355; 0.388; 0.391; 0.405; 0.438; 0.441; 0.455; 0.488; 0.491; 0.505; 0.538; 0.541; 0.555; 0.558; 0.561; 0.575; 1"
+      values="5; 5; 8; 30; 5; 8; 30; 5; 8; 30; 5; 8; 30; 5; 8; 30; 5; 8; 30; 5; 8; 30; 5; 8; 30; 5; 8; 30; 5; 8; 30; 5"/>
   </circle>
 
-  <!-- ╔══════════════════════════════════════════════╗ -->
-  <!-- ║  ASTRONAUT — bounce → collect → fly → crash   ║ -->
-  <!-- ║  16s loop                                      ║ -->
-  <!-- ╚══════════════════════════════════════════════╝ -->
+  <!-- ╔══════════════════════════════════════════════════════════╗ -->
+  <!-- ║  ASTRONAUT — bounce → collect → fly off → crash land     ║ -->
+  <!-- ║  20s loop — crash happens fast, no visible return         ║ -->
+  <!-- ╚══════════════════════════════════════════════════════════╝ -->
   <g>
-    <!-- Main position: bounce in place → liftoff right → crash from left → settle -->
-    <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.05; 0.10; 0.15; 0.20; 0.25; 0.30; 0.35; 0.40; 0.45; 0.50; 0.55; 0.60; 0.66; 0.70; 0.71; 0.78; 0.84; 0.90; 1.00"
-      values="250,118; 250,85; 250,118; 250,85; 250,118; 250,85; 250,118; 250,85; 250,118; 250,85; 250,118; 250,90; 250,78; 400,40; 750,-20; -120,15; 110,130; 210,158; 248,125; 250,118"/>
+    <!-- Main position: bounce → liftoff → off screen right → INSTANT reset to crash position → crash → settle -->
+    <animateTransform attributeName="transform" type="translate" dur="20s" repeatCount="indefinite"
+      keyTimes="0;      0.05;   0.10;   0.15;   0.20;   0.25;   0.30;   0.35;   0.40;   0.45;   0.50;   0.54;   0.57;   0.62;   0.68;   0.69;   0.70;   0.74;   0.80;   0.86;   0.92;   1.00"
+      values="250,130; 250,98; 250,130; 250,98; 250,130; 250,98; 250,130; 250,98; 250,130; 250,98; 250,130; 250,100; 250,80; 350,30; 750,-40; 750,-40; 250,80; 250,170; 250,145; 250,155; 250,143; 250,130"/>
 
-    <!-- Lean + crash tilt -->
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.05; 0.10; 0.15; 0.20; 0.25; 0.30; 0.35; 0.40; 0.45; 0.50; 0.55; 0.60; 0.66; 0.70; 0.71; 0.78; 0.84; 0.90; 1.00"
-      values="-6,0,0; 5,0,0; -6,0,0; 5,0,0; -6,0,0; 5,0,0; -6,0,0; 5,0,0; -6,0,0; 5,0,0; -6,0,0; 0,0,0; 5,0,0; 15,0,0; 20,0,0; -45,0,0; -25,0,0; 15,0,0; -3,0,0; -6,0,0"/>
+    <!-- Lean + crash tilt: dramatic tumble on re-entry, violent impact -->
+    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="20s" repeatCount="indefinite"
+      keyTimes="0;      0.05;   0.10;   0.15;   0.20;   0.25;   0.30;   0.35;   0.40;   0.45;   0.50;   0.54;   0.57;   0.62;   0.68;   0.69;   0.70;   0.74;   0.80;   0.86;   0.92;   1.00"
+      values="-6,0,0;  5,0,0;  -6,0,0; 5,0,0;  -6,0,0; 5,0,0;  -6,0,0; 5,0,0;  -6,0,0; 5,0,0;  -6,0,0; 0,0,0;  10,0,0; 20,0,0; 25,0,0; 25,0,0; -180,0,0; -220,0,0; -365,0,0; -360,0,0; -362,0,0; -360,0,0"/>
 
     <!-- Backpack base (jetpack builds on top) -->
-    <rect x="-14" y="-20" width="11" height="30" rx="3" fill="#777" stroke="#555" stroke-width="0.8" opacity="0.5"/>
+    <rect x="-14" y="-20" width="14" height="36" rx="3" fill="#777" stroke="#555" stroke-width="0.8" opacity="0.5"/>
 
-    <!-- JETPACK — grows as tools are absorbed, 10 stages -->
+    <!-- ╔══════════════════════════════════╗ -->
+    <!-- ║  JETPACK — BIGGER, grows visibly  ║ -->
+    <!-- ║  Each stage adds detail + glow    ║ -->
+    <!-- ╚══════════════════════════════════╝ -->
     <g>
-      <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.094; 0.144; 0.194; 0.244; 0.294; 0.344; 0.394; 0.444; 0.494; 0.544; 0.70; 0.71; 1"
+      <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.090; 0.141; 0.191; 0.241; 0.291; 0.341; 0.391; 0.441; 0.491; 0.541; 0.68; 0.69; 1"
         values="0; 0.1; 0.2; 0.3; 0.4; 0.5; 0.6; 0.7; 0.8; 0.9; 1; 1; 0; 0"/>
-      <animateTransform attributeName="transform" type="scale" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.094; 0.144; 0.194; 0.244; 0.294; 0.344; 0.394; 0.444; 0.494; 0.544; 1"
-        values="0.15,0.15; 0.2,0.2; 0.3,0.3; 0.4,0.4; 0.5,0.5; 0.6,0.6; 0.7,0.7; 0.8,0.8; 0.85,0.85; 0.95,0.95; 1,1; 1,1"/>
-      <!-- Pack body -->
-      <rect x="-18" y="-22" width="14" height="32" rx="3.5" fill="none" stroke="#4a8aff" stroke-width="1.8" opacity="0.9"/>
-      <rect x="-16" y="-18" width="4" height="8" rx="1.5" fill="#4a8aff" opacity="0.25"/>
-      <rect x="-16" y="-6" width="4" height="8" rx="1.5" fill="#4a8aff" opacity="0.25"/>
-      <circle cx="-11" cy="14" r="2" fill="#4a8aff" opacity="0.3"/>
-      <!-- Thruster bells -->
-      <rect x="-17" y="10" width="5" height="8" rx="1.5" fill="none" stroke="#4a8aff" stroke-width="1.2" opacity="0.8"/>
-      <rect x="-10" y="10" width="5" height="8" rx="1.5" fill="none" stroke="#4a8aff" stroke-width="1.2" opacity="0.8"/>
+      <animateTransform attributeName="transform" type="scale" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.090; 0.141; 0.191; 0.241; 0.291; 0.341; 0.391; 0.441; 0.491; 0.541; 1"
+        values="0.2,0.2; 0.3,0.3; 0.4,0.4; 0.5,0.5; 0.6,0.6; 0.7,0.7; 0.8,0.8; 0.85,0.85; 0.9,0.9; 0.95,0.95; 1,1; 1,1"/>
+      <!-- Main pack body — BIGGER -->
+      <rect x="-22" y="-26" width="20" height="44" rx="4" fill="none" stroke="#4a8aff" stroke-width="2" opacity="0.9"/>
+      <!-- Inner detail panels -->
+      <rect x="-20" y="-22" width="6" height="10" rx="2" fill="#4a8aff" opacity="0.2"/>
+      <rect x="-20" y="-8" width="6" height="10" rx="2" fill="#4a8aff" opacity="0.2"/>
+      <rect x="-20" y="6" width="6" height="8" rx="2" fill="#4a8aff" opacity="0.15"/>
+      <!-- Power indicator lights -->
+      <circle cx="-12" cy="-20" r="2.5" fill="#4a8aff" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.9;0.4" dur="0.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-12" cy="-12" r="2" fill="#4a8aff" opacity="0.3">
+        <animate attributeName="opacity" values="0.3;0.7;0.3" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-12" cy="-4" r="2" fill="#4a8aff" opacity="0.25"/>
+      <!-- Fuel gauge bar -->
+      <rect x="-19" y="16" width="14" height="3" rx="1" fill="none" stroke="#4a8aff" stroke-width="0.8" opacity="0.6"/>
+      <rect x="-19" y="16" width="4" height="3" rx="1" fill="#4a8aff" opacity="0.5">
+        <animate attributeName="width" dur="20s" repeatCount="indefinite"
+          keyTimes="0; 0.141; 0.241; 0.341; 0.441; 0.541; 1"
+          values="2; 4; 6; 8; 10; 14; 14"/>
+      </rect>
+      <!-- Thruster bells — BIGGER -->
+      <rect x="-21" y="18" width="8" height="12" rx="2" fill="none" stroke="#4a8aff" stroke-width="1.5" opacity="0.8"/>
+      <rect x="-11" y="18" width="8" height="12" rx="2" fill="none" stroke="#4a8aff" stroke-width="1.5" opacity="0.8"/>
+      <!-- Exhaust vents -->
+      <line x1="-19" y1="28" x2="-15" y2="28" stroke="#4a8aff" stroke-width="0.8" opacity="0.4"/>
+      <line x1="-9" y1="28" x2="-5" y2="28" stroke="#4a8aff" stroke-width="0.8" opacity="0.4"/>
     </g>
 
-    <!-- THRUSTER FLAMES — appear after all tools collected (9.2s+), off during crash -->
+    <!-- UPGRADE FLASH on jetpack — brief bright glow when each tool is absorbed -->
+    <rect x="-22" y="-26" width="20" height="44" rx="4" fill="#4a8aff" filter="url(#jpulse)">
+      <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.139; 0.141; 0.150; 0.189; 0.191; 0.200; 0.239; 0.241; 0.250; 0.289; 0.291; 0.300; 0.339; 0.341; 0.350; 0.389; 0.391; 0.400; 0.439; 0.441; 0.450; 0.489; 0.491; 0.500; 0.539; 0.541; 0.550; 0.559; 0.561; 0.570; 1"
+        values="0; 0; 0.6; 0; 0; 0.6; 0; 0; 0.6; 0; 0; 0.6; 0; 0; 0.6; 0; 0; 0.6; 0; 0; 0.6; 0; 0; 0.6; 0; 0; 0.6; 0; 0; 0.6; 0; 0"/>
+    </rect>
+
+    <!-- THRUSTER FLAMES — appear after all tools collected, much bigger -->
     <g>
-      <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.570; 0.575; 0.600; 0.70; 0.71; 1"
+      <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.555; 0.560; 0.580; 0.68; 0.69; 1"
         values="0; 0; 0.3; 1; 1; 0; 0"/>
-      <!-- Left flame -->
-      <ellipse cx="-14.5" cy="22" rx="3" ry="8" fill="#4a8aff" opacity="0.6" filter="url(#jg)">
-        <animate attributeName="ry" values="8;14;8" dur="0.15s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.6;1;0.6" dur="0.15s" repeatCount="indefinite"/>
+      <!-- Left flame outer -->
+      <ellipse cx="-17" cy="34" rx="5" ry="12" fill="#4a8aff" opacity="0.6" filter="url(#jg)">
+        <animate attributeName="ry" values="12;22;12" dur="0.12s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="0.12s" repeatCount="indefinite"/>
       </ellipse>
-      <ellipse cx="-14.5" cy="22" rx="1.5" ry="5" fill="#88ccff" opacity="0.8">
-        <animate attributeName="ry" values="5;9;5" dur="0.15s" repeatCount="indefinite"/>
+      <!-- Left flame inner -->
+      <ellipse cx="-17" cy="34" rx="2.5" ry="8" fill="#88ccff" opacity="0.8">
+        <animate attributeName="ry" values="8;15;8" dur="0.12s" repeatCount="indefinite"/>
       </ellipse>
-      <!-- Right flame -->
-      <ellipse cx="-7.5" cy="22" rx="3" ry="8" fill="#4a8aff" opacity="0.6" filter="url(#jg)">
-        <animate attributeName="ry" values="8;14;8" dur="0.15s" begin="0.08s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0.6;1;0.6" dur="0.15s" begin="0.08s" repeatCount="indefinite"/>
+      <!-- Right flame outer -->
+      <ellipse cx="-7" cy="34" rx="5" ry="12" fill="#4a8aff" opacity="0.6" filter="url(#jg)">
+        <animate attributeName="ry" values="12;22;12" dur="0.12s" begin="0.06s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="0.12s" begin="0.06s" repeatCount="indefinite"/>
       </ellipse>
-      <ellipse cx="-7.5" cy="22" rx="1.5" ry="5" fill="#88ccff" opacity="0.8">
-        <animate attributeName="ry" values="5;9;5" dur="0.15s" begin="0.08s" repeatCount="indefinite"/>
+      <!-- Right flame inner -->
+      <ellipse cx="-7" cy="34" rx="2.5" ry="8" fill="#88ccff" opacity="0.8">
+        <animate attributeName="ry" values="8;15;8" dur="0.12s" begin="0.06s" repeatCount="indefinite"/>
       </ellipse>
+      <!-- Flame particles shooting down -->
+      <circle r="2" fill="#4a8aff" opacity="0.5">
+        <animate attributeName="cx" values="-17;-19;-15;-17" dur="0.3s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="46;60;70;46" dur="0.3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0.2;0;0.5" dur="0.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="1.5" fill="#88ccff" opacity="0.4">
+        <animate attributeName="cx" values="-7;-5;-9;-7" dur="0.25s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="46;58;68;46" dur="0.25s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.15;0;0.4" dur="0.25s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
     <!-- Torso -->
@@ -277,19 +346,19 @@
 
     <!-- LEFT ARM -->
     <g>
-      <animateTransform attributeName="transform" type="rotate" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.05; 0.10; 0.15; 0.20; 0.25; 0.30; 0.35; 0.40; 0.45; 0.50; 0.55; 0.60; 0.66; 0.70; 0.71; 0.78; 0.84; 0.90; 1.00"
-        values="25,-2,-6; -25,-2,-6; 25,-2,-6; -25,-2,-6; 25,-2,-6; -25,-2,-6; 25,-2,-6; -25,-2,-6; 25,-2,-6; -25,-2,-6; 15,-2,-6; 5,-2,-6; 0,-2,-6; -10,-2,-6; -15,-2,-6; 40,-2,-6; 20,-2,-6; -10,-2,-6; 15,-2,-6; 25,-2,-6"/>
+      <animateTransform attributeName="transform" type="rotate" dur="20s" repeatCount="indefinite"
+        keyTimes="0;      0.05;   0.10;   0.15;   0.20;   0.25;   0.30;   0.35;   0.40;   0.45;   0.50;   0.54;   0.57;   0.62;   0.68;   0.69;   0.70;   0.74;   0.80;   0.86;   0.92;   1.00"
+        values="25,-2,-6; -25,-2,-6; 25,-2,-6; -25,-2,-6; 25,-2,-6; -25,-2,-6; 25,-2,-6; -25,-2,-6; 25,-2,-6; -25,-2,-6; 15,-2,-6; 5,-2,-6; 0,-2,-6; -10,-2,-6; -15,-2,-6; -15,-2,-6; 60,-2,-6; 40,-2,-6; -10,-2,-6; 15,-2,-6; 20,-2,-6; 25,-2,-6"/>
       <rect x="-17" y="-14" width="14" height="7" rx="3.5" fill="#ccc" stroke="#aaa" stroke-width="0.4" transform="rotate(-15,-5,-10)"/>
       <rect x="-24" y="-20" width="9" height="6" rx="3" fill="#c0c0c0" stroke="#aaa" stroke-width="0.4" transform="rotate(-20,-19,-16)"/>
       <circle cx="-26" cy="-22" r="3.5" fill="#bbb" stroke="#999" stroke-width="0.4"/>
     </g>
 
-    <!-- RIGHT ARM -->
+    <!-- RIGHT ARM — reaches out for tools -->
     <g>
-      <animateTransform attributeName="transform" type="rotate" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.05; 0.10; 0.15; 0.20; 0.25; 0.30; 0.35; 0.40; 0.45; 0.50; 0.55; 0.60; 0.66; 0.70; 0.71; 0.78; 0.84; 0.90; 1.00"
-        values="-25,16,-6; 25,16,-6; -25,16,-6; 25,16,-6; -25,16,-6; 25,16,-6; -25,16,-6; 25,16,-6; -25,16,-6; 25,16,-6; -15,16,-6; -5,16,-6; 0,16,-6; 10,16,-6; 15,16,-6; -40,16,-6; -20,16,-6; 10,16,-6; -15,16,-6; -25,16,-6"/>
+      <animateTransform attributeName="transform" type="rotate" dur="20s" repeatCount="indefinite"
+        keyTimes="0;      0.05;   0.10;   0.15;   0.20;   0.25;   0.30;   0.35;   0.40;   0.45;   0.50;   0.54;   0.57;   0.62;   0.68;   0.69;   0.70;   0.74;   0.80;   0.86;   0.92;   1.00"
+        values="-25,16,-6; 25,16,-6; -25,16,-6; 25,16,-6; -25,16,-6; 25,16,-6; -25,16,-6; 25,16,-6; -25,16,-6; 25,16,-6; -15,16,-6; -5,16,-6; 0,16,-6; 10,16,-6; 15,16,-6; 15,16,-6; -60,16,-6; -40,16,-6; 10,16,-6; -15,16,-6; -20,16,-6; -25,16,-6"/>
       <rect x="16" y="-14" width="14" height="7" rx="3.5" fill="#ccc" stroke="#aaa" stroke-width="0.4" transform="rotate(15,20,-10)"/>
       <rect x="27" y="-20" width="9" height="6" rx="3" fill="#c0c0c0" stroke="#aaa" stroke-width="0.4" transform="rotate(20,31,-16)"/>
       <circle cx="38" cy="-22" r="3.5" fill="#bbb" stroke="#999" stroke-width="0.4"/>
@@ -297,9 +366,9 @@
 
     <!-- LEFT LEG -->
     <g>
-      <animateTransform attributeName="transform" type="rotate" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.05; 0.10; 0.15; 0.20; 0.25; 0.30; 0.35; 0.40; 0.45; 0.50; 0.55; 0.60; 0.66; 0.70; 0.71; 0.78; 0.84; 0.90; 1.00"
-        values="-35,1,10; 30,1,10; -35,1,10; 30,1,10; -35,1,10; 30,1,10; -35,1,10; 30,1,10; -35,1,10; 30,1,10; -15,1,10; -5,1,10; 10,1,10; 15,1,10; 20,1,10; 25,1,10; -20,1,10; -30,1,10; -25,1,10; -35,1,10"/>
+      <animateTransform attributeName="transform" type="rotate" dur="20s" repeatCount="indefinite"
+        keyTimes="0;      0.05;   0.10;   0.15;   0.20;   0.25;   0.30;   0.35;   0.40;   0.45;   0.50;   0.54;   0.57;   0.62;   0.68;   0.69;   0.70;   0.74;   0.80;   0.86;   0.92;   1.00"
+        values="-35,1,10; 30,1,10; -35,1,10; 30,1,10; -35,1,10; 30,1,10; -35,1,10; 30,1,10; -35,1,10; 30,1,10; -15,1,10; -5,1,10; 10,1,10; 15,1,10; 20,1,10; 20,1,10; 45,1,10; -20,1,10; -30,1,10; -25,1,10; -30,1,10; -35,1,10"/>
       <rect x="-3" y="10" width="9" height="20" rx="4.5" fill="#ccc" stroke="#aaa" stroke-width="0.4"/>
       <rect x="-2" y="28" width="8" height="16" rx="4" fill="#c0c0c0" stroke="#aaa" stroke-width="0.3"/>
       <rect x="-4" y="42" width="11" height="6" rx="3" fill="#777" stroke="#555" stroke-width="0.4"/>
@@ -307,9 +376,9 @@
 
     <!-- RIGHT LEG -->
     <g>
-      <animateTransform attributeName="transform" type="rotate" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.05; 0.10; 0.15; 0.20; 0.25; 0.30; 0.35; 0.40; 0.45; 0.50; 0.55; 0.60; 0.66; 0.70; 0.71; 0.78; 0.84; 0.90; 1.00"
-        values="30,11,10; -35,11,10; 30,11,10; -35,11,10; 30,11,10; -35,11,10; 30,11,10; -35,11,10; 30,11,10; -35,11,10; 15,11,10; 5,11,10; -10,11,10; -15,11,10; -20,11,10; -25,11,10; 20,11,10; 30,11,10; 25,11,10; 30,11,10"/>
+      <animateTransform attributeName="transform" type="rotate" dur="20s" repeatCount="indefinite"
+        keyTimes="0;      0.05;   0.10;   0.15;   0.20;   0.25;   0.30;   0.35;   0.40;   0.45;   0.50;   0.54;   0.57;   0.62;   0.68;   0.69;   0.70;   0.74;   0.80;   0.86;   0.92;   1.00"
+        values="30,11,10; -35,11,10; 30,11,10; -35,11,10; 30,11,10; -35,11,10; 30,11,10; -35,11,10; 30,11,10; -35,11,10; 15,11,10; 5,11,10; -10,11,10; -15,11,10; -20,11,10; -20,11,10; -45,11,10; 20,11,10; 30,11,10; 25,11,10; 28,11,10; 30,11,10"/>
       <rect x="7" y="10" width="9" height="20" rx="4.5" fill="#ccc" stroke="#aaa" stroke-width="0.4"/>
       <rect x="8" y="28" width="8" height="16" rx="4" fill="#c0c0c0" stroke="#aaa" stroke-width="0.3"/>
       <rect x="6" y="42" width="11" height="6" rx="3" fill="#777" stroke="#555" stroke-width="0.4"/>
@@ -329,61 +398,167 @@
     </circle>
   </g>
 
-  <!-- ╔════════════════════════════╗ -->
-  <!-- ║  RUNNING DUST (phase 1)    ║ -->
-  <!-- ╚════════════════════════════╝ -->
+  <!-- ╔════════════════════════════════════╗ -->
+  <!-- ║  RUNNING DUST (collection phase)   ║ -->
+  <!-- ╚════════════════════════════════════╝ -->
   <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.55; 0.58; 0.70; 1" values="0.5; 0.5; 0.2; 0; 0"/>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.53; 0.56; 0.68; 1" values="0.5; 0.5; 0.2; 0; 0"/>
     <circle r="2" fill="#3a5a7a" filter="url(#js)">
       <animate attributeName="cx" values="242;240;246;242" dur="0.6s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="177;172;175;177" dur="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="194;189;192;194" dur="0.6s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0.4;0.2;0" dur="0.6s" repeatCount="indefinite"/>
     </circle>
     <circle r="1.5" fill="#3a5a7a" filter="url(#js)">
       <animate attributeName="cx" values="262;260;267;262" dur="0.6s" begin="0.3s" repeatCount="indefinite"/>
-      <animate attributeName="cy" values="177;171;174;177" dur="0.6s" begin="0.3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="194;188;191;194" dur="0.6s" begin="0.3s" repeatCount="indefinite"/>
       <animate attributeName="opacity" values="0;0.35;0.15;0" dur="0.6s" begin="0.3s" repeatCount="indefinite"/>
     </circle>
   </g>
 
-  <!-- ╔════════════════════════════╗ -->
-  <!-- ║  CRASH DUST (phase 3)      ║ -->
-  <!-- ╚════════════════════════════╝ -->
+  <!-- ╔════════════════════════════════════════════════════════╗ -->
+  <!-- ║  VIOLENT CRASH — massive dust explosion + debris        ║ -->
+  <!-- ║  Happens at 0.70 (astronaut slams down from sky)        ║ -->
+  <!-- ║  Screen shake effect via ground flash                    ║ -->
+  <!-- ╚════════════════════════════════════════════════════════╝ -->
+
+  <!-- IMPACT FLASH — bright white flash across ground on impact -->
+  <rect x="150" y="170" width="200" height="50" fill="#4a8aff" filter="url(#jbig)">
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.698; 0.700; 0.710; 0.720; 1" values="0; 0; 0.8; 0.3; 0; 0"/>
+  </rect>
+
+  <!-- CRATER CRACK LINES radiating from impact point -->
   <g>
-    <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
-      keyTimes="0; 0.82; 0.84; 0.88; 0.95; 1" values="0; 0; 0.8; 0.6; 0; 0"/>
-    <!-- Dust burst particles -->
-    <circle r="4" fill="#3a5a7a" filter="url(#jd)">
-      <animate attributeName="cx" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.92; 1" values="210; 210; 200; 170; 170"/>
-      <animate attributeName="cy" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.92; 1" values="165; 165; 160; 155; 155"/>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.698; 0.700; 0.750; 0.850; 0.920; 1" values="0; 0; 0; 0.6; 0.4; 0; 0"/>
+    <line x1="250" y1="195" x2="210" y2="200" stroke="#3a6a9a" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="250" y1="195" x2="190" y2="198" stroke="#3a6a9a" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+    <line x1="250" y1="195" x2="290" y2="202" stroke="#3a6a9a" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+    <line x1="250" y1="195" x2="310" y2="199" stroke="#3a6a9a" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+    <line x1="250" y1="195" x2="230" y2="205" stroke="#3a6a9a" stroke-width="0.8" stroke-linecap="round" opacity="0.3"/>
+  </g>
+
+  <!-- BIG DUST CLOUD — billowing up from impact -->
+  <g>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.698; 0.700; 0.720; 0.780; 0.860; 0.940; 1" values="0; 0; 0; 0.9; 0.7; 0.3; 0; 0"/>
+    <!-- Main dust cloud center -->
+    <ellipse rx="30" ry="20" fill="#2a3a5a" filter="url(#jbig)">
+      <animate attributeName="cx" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="250; 250; 250; 250; 250"/>
+      <animate attributeName="cy" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="195; 195; 175; 160; 160"/>
+      <animate attributeName="rx" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="10; 10; 40; 70; 70"/>
+      <animate attributeName="ry" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="5; 5; 25; 40; 40"/>
+    </ellipse>
+    <!-- Dust cloud left -->
+    <ellipse rx="18" ry="14" fill="#2a4a6a" filter="url(#jd)">
+      <animate attributeName="cx" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="250; 250; 220; 170; 170"/>
+      <animate attributeName="cy" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="195; 195; 178; 162; 162"/>
+      <animate attributeName="rx" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="5; 5; 22; 35; 35"/>
+    </ellipse>
+    <!-- Dust cloud right -->
+    <ellipse rx="18" ry="14" fill="#2a4a6a" filter="url(#jd)">
+      <animate attributeName="cx" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="250; 250; 280; 330; 330"/>
+      <animate attributeName="cy" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="195; 195; 180; 165; 165"/>
+      <animate attributeName="rx" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="5; 5; 20; 30; 30"/>
+    </ellipse>
+  </g>
+
+  <!-- DEBRIS CHUNKS flying out from impact -->
+  <g>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.698; 0.700; 0.720; 0.800; 0.880; 1" values="0; 0; 0; 0.8; 0.4; 0; 0"/>
+    <!-- Chunk 1 — up-left -->
+    <rect width="6" height="4" rx="1" fill="#3a5a7a" transform="rotate(25)">
+      <animate attributeName="x" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="250; 250; 210; 150; 150"/>
+      <animate attributeName="y" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.800; 0.860; 1" values="195; 195; 150; 130; 175; 175"/>
+    </rect>
+    <!-- Chunk 2 — up-right -->
+    <rect width="5" height="3" rx="1" fill="#4a6a8a" transform="rotate(-30)">
+      <animate attributeName="x" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="250; 250; 300; 360; 360"/>
+      <animate attributeName="y" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.800; 0.860; 1" values="195; 195; 140; 125; 180; 180"/>
+    </rect>
+    <!-- Chunk 3 — high arc left -->
+    <rect width="4" height="3" rx="0.5" fill="#3a5a7a" transform="rotate(45)">
+      <animate attributeName="x" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="250; 250; 195; 140; 140"/>
+      <animate attributeName="y" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.780; 0.860; 1" values="195; 195; 120; 100; 185; 185"/>
+    </rect>
+    <!-- Chunk 4 — high arc right -->
+    <rect width="7" height="4" rx="1" fill="#2a4a6a" transform="rotate(-15)">
+      <animate attributeName="x" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="250; 250; 315; 380; 380"/>
+      <animate attributeName="y" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.780; 0.860; 1" values="195; 195; 130; 110; 190; 190"/>
+    </rect>
+    <!-- Chunk 5 — short pop up -->
+    <circle r="3" fill="#3a6a9a">
+      <animate attributeName="cx" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="250; 250; 240; 225; 225"/>
+      <animate attributeName="cy" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.800; 0.860; 1" values="195; 195; 155; 145; 192; 192"/>
     </circle>
-    <circle r="3" fill="#2a4a6a" filter="url(#jd)">
-      <animate attributeName="cx" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.92; 1" values="210; 210; 220; 250; 250"/>
-      <animate attributeName="cy" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.92; 1" values="165; 165; 158; 150; 150"/>
+    <!-- Chunk 6 — far right -->
+    <circle r="2.5" fill="#2a5a8a">
+      <animate attributeName="cx" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.860; 1" values="250; 250; 340; 400; 400"/>
+      <animate attributeName="cy" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.800; 0.860; 1" values="195; 195; 145; 135; 190; 190"/>
     </circle>
-    <circle r="5" fill="#2a3a5a" filter="url(#jd)">
-      <animate attributeName="cx" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.92; 1" values="210; 210; 215; 230; 230"/>
-      <animate attributeName="cy" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.92; 1" values="168; 168; 162; 155; 155"/>
-    </circle>
-    <circle r="3.5" fill="#3a5a7a" filter="url(#jd)">
-      <animate attributeName="cx" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.92; 1" values="210; 210; 195; 160; 160"/>
-      <animate attributeName="cy" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.92; 1" values="170; 170; 165; 162; 162"/>
-    </circle>
-    <!-- Ground scuff line -->
-    <line y1="177" y2="177" stroke="#3a5a7a" stroke-width="2" stroke-linecap="round" opacity="0.5">
-      <animate attributeName="x1" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.90; 1" values="150; 150; 150; 130; 130"/>
-      <animate attributeName="x2" dur="16s" repeatCount="indefinite"
-        keyTimes="0; 0.82; 0.84; 0.90; 1" values="150; 150; 220; 250; 250"/>
+  </g>
+
+  <!-- GROUND SCUFF — long skid mark from impact -->
+  <g>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.698; 0.700; 0.720; 0.800; 0.920; 1" values="0; 0; 0; 0.6; 0.5; 0; 0"/>
+    <line y1="195" y2="195" stroke="#3a5a7a" stroke-width="2.5" stroke-linecap="round">
+      <animate attributeName="x1" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.800; 1" values="250; 250; 200; 160; 160"/>
+      <animate attributeName="x2" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.800; 1" values="250; 250; 300; 340; 340"/>
     </line>
+    <!-- Secondary scuff -->
+    <line y1="197" y2="197" stroke="#2a4a6a" stroke-width="1.5" stroke-linecap="round" opacity="0.4">
+      <animate attributeName="x1" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.800; 1" values="250; 250; 210; 175; 175"/>
+      <animate attributeName="x2" dur="20s" repeatCount="indefinite"
+        keyTimes="0; 0.700; 0.720; 0.800; 1" values="250; 250; 290; 320; 320"/>
+    </line>
+  </g>
+
+  <!-- SMALL SMOKE WISPS rising after crash settles -->
+  <g>
+    <animate attributeName="opacity" dur="20s" repeatCount="indefinite"
+      keyTimes="0; 0.780; 0.820; 0.900; 0.960; 1" values="0; 0; 0.4; 0.3; 0; 0"/>
+    <circle r="3" fill="#2a4a6a" filter="url(#js)">
+      <animate attributeName="cx" values="240;238;242;240" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="185;170;165;185" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.2;0;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2" fill="#3a5a7a" filter="url(#js)">
+      <animate attributeName="cx" values="260;262;258;260" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="185;168;162;185" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.15;0;0.3" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.5" fill="#2a3a5a" filter="url(#js)">
+      <animate attributeName="cx" values="250;247;253;250" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="180;165;158;180" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35;0.1;0;0.35" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>

@@ -60,9 +60,9 @@
         <animate attributeName="opacity" values="0.4;1;0.4" dur="2.8s" repeatCount="indefinite"/>
       </circle>
     </pattern>
-    <!-- Wider crawl clip -->
+    <!-- Wider crawl clip — nearly full width -->
     <clipPath id="crawlClip">
-      <rect x="50" y="20" width="800" height="370"/>
+      <rect x="20" y="20" width="860" height="370"/>
     </clipPath>
   </defs>
 
@@ -383,38 +383,29 @@
 
         <text x="450" y="200" text-anchor="middle" fill="none">.</text>
 
-        <!-- Body crawl text — bigger font -->
+        <!-- Body crawl text — wider lines, more text per line -->
         <text x="450" y="260" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="24" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">A long time ago in a galaxy not so far away,</text>
+          fill="#FFE81F" filter="url(#textGlow)">A long time ago in a galaxy not so far away, a builder</text>
         <text x="450" y="300" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="24" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">a builder emerged at the intersection</text>
-        <text x="450" y="340" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">of DATA and STRATEGY.</text>
+          fill="#FFE81F" filter="url(#textGlow)">emerged at the intersection of DATA and STRATEGY.</text>
 
-        <text x="450" y="410" text-anchor="middle"
+        <text x="450" y="380" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="24" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">Finishing an MSc in Business Analytics</text>
-        <text x="450" y="450" text-anchor="middle"
+          fill="#FFE81F" filter="url(#textGlow)">Finishing an MSc in Business Analytics at Esade,</text>
+        <text x="450" y="420" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="24" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">at Esade, armed with 2+ years in</text>
-        <text x="450" y="490" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">market analysis and marketing.</text>
+          fill="#FFE81F" filter="url(#textGlow)">armed with 2+ years in market analysis and marketing.</text>
 
-        <text x="450" y="560" text-anchor="middle"
+        <text x="450" y="500" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="24" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">I don't just analyze data.</text>
-        <text x="450" y="600" text-anchor="middle"
-          font-family="'Times New Roman', serif" font-size="24" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">I build tools that solve real problems.</text>
+          fill="#FFE81F" filter="url(#textGlow)">I don't just analyze data. I build tools that solve real problems.</text>
 
-        <text x="450" y="680" text-anchor="middle"
+        <text x="450" y="580" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="24" font-style="italic"
           fill="#FFE81F" filter="url(#textGlow)">South Africa · The Netherlands · Spain</text>
-        <text x="450" y="720" text-anchor="middle"
+        <text x="450" y="620" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="24" font-style="italic"
           fill="#FFE81F" filter="url(#textGlow)">Builder. Problem solver. Explorer.</text>
       </g>
@@ -425,7 +416,7 @@
   <rect x="0" y="0" width="900" height="100" fill="url(#fadeTop)"/>
   <rect x="0" y="300" width="900" height="100" fill="url(#fadeBottom)"/>
 
-  <!-- Left/right edge darkening — narrower for wider text -->
-  <rect x="0" y="0" width="70" height="400" fill="black" opacity="0.5"/>
-  <rect x="830" y="0" width="70" height="400" fill="black" opacity="0.5"/>
+  <!-- Left/right edge darkening — minimal for widest text -->
+  <rect x="0" y="0" width="40" height="400" fill="black" opacity="0.5"/>
+  <rect x="860" y="0" width="40" height="400" fill="black" opacity="0.5"/>
 </svg>

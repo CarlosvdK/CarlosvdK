@@ -126,10 +126,3 @@ Workflow automations (ingest → enrich → notify).
   <i>I like projects where business context meets real building—data in, product out.</i>
 </div>
 
----
-
-<div align="center">
-
-![footer](./footer.svg)
-
-</div>

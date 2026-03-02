@@ -480,7 +480,7 @@
           fill="#FFE81F" filter="url(#textGlow)" letter-spacing="6">CARLOS</text>
         <text x="450" y="135" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="28" font-weight="bold"
-          fill="#FFE81F" filter="url(#textGlow)" letter-spacing="8">THE DATA BUILDER</text>
+          fill="#FFE81F" filter="url(#textGlow)" letter-spacing="8">MISSION BRIEF:</text>
 
         <text x="450" y="200" text-anchor="middle" fill="none">.</text>
 
@@ -501,7 +501,7 @@
 
         <text x="450" y="500" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="24" font-style="italic"
-          fill="#FFE81F" filter="url(#textGlow)">I don't just analyze data. I build tools that solve real problems.</text>
+          fill="#FFE81F" filter="url(#textGlow)">The goal isn't just to analyse data, it's to build solutions that solve problems.</text>
 
         <text x="450" y="580" text-anchor="middle"
           font-family="'Times New Roman', serif" font-size="24" font-style="italic"

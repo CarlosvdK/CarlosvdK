@@ -47,18 +47,46 @@ A digestible news feed built to make staying informed fast and simple.
 <tr>
 <td width="50%" valign="top">
 
-### <img src="assets/icons/code.svg" width="20" height="20" /> [FaceID Attendance](https://github.com/CarlosvdK/Face-Attendance_assignment)
-Face recognition attendance system for quick, automated check-ins.
+### <img src="assets/icons/chart.svg" width="20" height="20" /> [F1 Tyre Strategy Model](https://github.com/CarlosvdK/f1_tyre_prediction)
+ML model that predicts optimal F1 pit stop timing and tyre compound using Gradient Boosting on ~93k real laps.
 
-[`View Repo →`](https://github.com/CarlosvdK/Face-Attendance_assignment)
+[`View Repo →`](https://github.com/CarlosvdK/f1_tyre_prediction)
 
 </td>
 <td width="50%" valign="top">
 
-### <img src="assets/icons/bolt.svg" width="20" height="20" /> n8n Automation
-Workflow automations (ingest → enrich → notify).
+### <img src="assets/icons/bolt.svg" width="20" height="20" /> [Trading Bot](https://github.com/CarlosvdK/trading_bot)
+Automated trading bot with risk management, regime detection, backtesting, and a live dashboard.
 
-`Coming soon`
+[`View Repo →`](https://github.com/CarlosvdK/trading_bot)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### <img src="assets/icons/code.svg" width="20" height="20" /> [Code Explainer](https://github.com/CarlosvdK/code-explainer)
+Tool for breaking down and explaining codebases to make them easier to understand.
+
+[`View Repo →`](https://github.com/CarlosvdK/code-explainer)
+
+</td>
+<td width="50%" valign="top">
+
+### <img src="assets/icons/robot.svg" width="20" height="20" /> [Prompt Platform](https://github.com/CarlosvdK/prompt-platform)
+Platform for managing, testing, and optimising AI prompts.
+
+[`View Repo →`](https://github.com/CarlosvdK/prompt-platform)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### <img src="assets/icons/target.svg" width="20" height="20" /> [FaceID Attendance](https://github.com/CarlosvdK/Face-Attendance_assignment)
+Face recognition attendance system for quick, automated check-ins.
+
+[`View Repo →`](https://github.com/CarlosvdK/Face-Attendance_assignment)
 
 </td>
 </tr>
